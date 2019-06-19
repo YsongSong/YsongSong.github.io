@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on LWAITING</title>
+    <link>https://ysongsong.github.io/tags/linux/</link>
+    <description>Recent content in Linux on LWAITING</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 May 2019 10:17:34 +0000</lastBuildDate>
+    
+	<atom:link href="https://ysongsong.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux目录结构</title>
+      <link>https://ysongsong.github.io/2019/linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Fri, 10 May 2019 10:17:34 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <description>Linux文件目录结构    目录 说明     bin 存放二进制可执行文件(ls,cat,mkdir等)   boot 存放用于系统引导时使用的各种文件   dev 用于存放设备文件   etc 存放系统配置文件   home 存放所有用户文件的根目录   lib 存放跟文件系统中的程序运行所需要的共享库及内核模块   mnt 系统管理员安装临时文件系统的安装点   opt 额外安装的可选应用程序包所放置的位置   proc 虚拟文件系统，存放当前内存的映射   root 超级用户目录   sbin 存放二进制可执行文件，只有root才能访问   tmp 用于存放各种临时文件   usr 用于存放系统应用程序，比较重要的目录/usr/local 本地管理员软件安装目录   var 用于存放运行时需要改变数据的文件    Linux文件操作命令    命令 说明 语法 参数 参数说明     ls 显示文件和目录列表 ls [-alrtAFR] [name&amp;hellip;]        -l 列出文件的详细信息      -a 列出当前目录所有文件，包含隐藏文件   mkdir 创建目录 mkdir [-p] dirName        -p 父目录不存在情况下先生成父目录   cd 切换目录 cd [dirName]     touch 生成一个空文件      echo 生成一个带内容文件 echo abcd &amp;gt; 1.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="LWAITING">
+  <meta name="description" content="LWAITING BLOG">
+  <meta name="keywords" content="lwaiting">
+  
+  <link rel="prev" href="https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/" />
+  <link rel="next" href="https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+  <link rel="canonical" href="https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Spring Boot-MyBatis 整合 | LWAITING
+       
+  </title>
+  <meta name="title" content="Spring Boot-MyBatis 整合 | LWAITING">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ysongsong.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Spring Boot-MyBatis 整合",
+    "headline" : "Spring Boot-MyBatis 整合",
+    "description" : "Spring Boot 整合 Druid 概述 Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。\nDruid 是目前最好的数据库连接池，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。Druid 已经在阿里巴巴部署了超过 600 个应用，经过多年生产环境大规模部署的严苛考验。Druid 是阿里巴巴开发的号称为监控而生的数据库连接池！\n引入依赖 在 pom.xml 文件中引入 druid-spring-boot-starter 依赖\n\x26lt;dependency\x26gt; \x26lt;groupId\x26gt;com.alibaba\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;druid-spring-boot-starter\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;1.1.10\x26lt;\/version\x26gt; \x26lt;\/dependency\x26gt;  引入数据库连接依赖\n\x26lt;dependency\x26gt; \x26lt;groupId\x26gt;mysql\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;mysql-connector-java\x26lt;\/artifactId\x26gt; \x26lt;scope\x26gt;runtime\x26lt;\/scope\x26gt; \x26lt;\/dependency\x26gt;  配置 application.yml 在 application.yml 中配置数据库连接\nspring: datasource: druid: url: jdbc:mysql:\/\/ip:port\/dbname?useUnicode=true\x26amp;characterEncoding=utf-8\x26amp;useSSL=false username: root password: 123456 initial-size: 1 min-idle: 1 max-active: 20 test-on-borrow: true # MySQL 8.x: com.mysql.cj.jdbc.Driver driver-class-name: com.",
+    "inLanguage" : "en-us",
+    "author" : "LWAITING",
+    "creator" : "LWAITING",
+    "publisher": "LWAITING",
+    "accountablePerson" : "LWAITING",
+    "copyrightHolder" : "LWAITING",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-05-13 11:37:19 \x2b0000 UTC",
+    "dateModified" : "2019-05-13 11:37:19 \x2b0000 UTC",
+    "url" : "https:\/\/ysongsong.github.io\/2019\/springbootmybatis%E6%95%B4%E5%90%88\/",
+    "wordCount" : "953",
+    "keywords" : [ "Mybatis","SpringBoot", "LWAITING"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Spring Boot-MyBatis 整合</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://ysongsong.github.io/" rel="author">LWAITING</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-05-13 itemprop="datePublished">May 13, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.hacpai.com/bing/20180210.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h1 id="spring-boot-整合-druid">Spring Boot 整合 Druid</h1>
+
+<h2 id="概述">概述</h2>
+
+<p>Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。</p>
+
+<p>Druid 是目前最好的数据库连接池，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。Druid 已经在阿里巴巴部署了超过 600 个应用，经过多年生产环境大规模部署的严苛考验。Druid 是阿里巴巴开发的号称为监控而生的数据库连接池！</p>
+
+<h2 id="引入依赖">引入依赖</h2>
+
+<p>在 <code>pom.xml</code> 文件中引入 <code>druid-spring-boot-starter</code> 依赖</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.1.10&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>引入数据库连接依赖</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h2 id="配置-application-yml">配置 <code>application.yml</code></h2>
+
+<p>在 <code>application.yml</code> 中配置数据库连接</p>
+
+<pre><code class="language-yml">spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://ip:port/dbname?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+</code></pre>
+
+<h1 id="spring-boot-整合-tk-mybatis">Spring Boot 整合 tk.mybatis</h1>
+
+<p>tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更加高效</p>
+
+<h2 id="引入依赖-1">引入依赖</h2>
+
+<p>在 <code>pom.xml</code> 文件中引入 <code>mapper-spring-boot-starter</code> 依赖，该依赖会自动引入 MyBaits 相关依赖</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;
+    &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;2.0.2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h2 id="配置-application-yml-1">配置 <code>application.yml</code></h2>
+
+<p>配置 MyBatis</p>
+
+<pre><code class="language-yml">mybatis:
+    type-aliases-package: 实体类的存放路径，如：com.funtl.hello.spring.boot.entity
+    mapper-locations: classpath:mapper/*.xml
+</code></pre>
+
+<h2 id="创建一个通用的父级接口">创建一个通用的父级接口</h2>
+
+<p>主要作用是让 DAO 层的接口继承该接口，以达到使用 tk.mybatis 的目的</p>
+
+<pre><code class="language-java">package com.funtl.utils;
+
+import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.common.MySqlMapper;
+
+/**
+ * 自己的 Mapper
+ * 特别注意，该接口不能被扫描到，否则会出错
+ * &lt;p&gt;Title: MyMapper&lt;/p&gt;
+ * &lt;p&gt;Description: &lt;/p&gt;
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/5/29 0:57
+ */
+public interface MyMapper&lt;T&gt; extends Mapper&lt;T&gt;, MySqlMapper&lt;T&gt; {
+}
+</code></pre>
+
+<h1 id="spring-boot-整合-pagehelper">Spring Boot 整合 PageHelper</h1>
+
+<p>PageHelper 是 Mybatis 的分页插件，支持多数据库、多数据源。可以简化数据库的分页查询操作，整合过程也极其简单，只需引入依赖即可。</p>
+
+<h2 id="引入依赖-2">引入依赖</h2>
+
+<p>在 <code>pom.xml</code> 文件中引入 <code>pagehelper-spring-boot-starter</code> 依赖</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;
+    &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.2.5&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h1 id="使用-mybatis-的-maven-插件生成代码">使用 MyBatis 的 Maven 插件生成代码</h1>
+
+<p>我们无需手动编写 实体类、DAO、XML 配置文件，只需要使用 MyBatis 提供的一个 Maven 插件就可以自动生成所需的各种文件便能够满足基本的业务需求，如果业务比较复杂只需要修改相关文件即可。</p>
+
+<h2 id="配置插件">配置插件</h2>
+
+<p>在 <code>pom.xml</code> 文件中增加 <code>mybatis-generator-maven-plugin</code> 插件</p>
+
+<pre><code class="language-xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.mybatis.generator&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-generator-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;1.3.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;configurationFile&gt;${basedir}/src/main/resources/generator/generatorConfig.xml&lt;/configurationFile&gt;
+                &lt;overwrite&gt;true&lt;/overwrite&gt;
+                &lt;verbose&gt;true&lt;/verbose&gt;
+            &lt;/configuration&gt;
+            &lt;dependencies&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;mysql&lt;/groupId&gt;
+                    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+                    &lt;version&gt;${mysql.version}&lt;/version&gt;
+                &lt;/dependency&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;
+                    &lt;artifactId&gt;mapper&lt;/artifactId&gt;
+                    &lt;version&gt;3.4.4&lt;/version&gt;
+                &lt;/dependency&gt;
+            &lt;/dependencies&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<ul>
+<li>configurationFile：自动生成所需的配置文件路径</li>
+</ul>
+
+<h2 id="自动生成的配置">自动生成的配置</h2>
+
+<p>在 <code>src/main/resources/generator/</code> 目录下创建 <code>generatorConfig.xml</code> 配置文件：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE generatorConfiguration
+        PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;
+        &quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;&gt;
+
+&lt;generatorConfiguration&gt;
+    &lt;!-- 引入数据库连接配置 --&gt;
+    &lt;properties resource=&quot;jdbc.properties&quot;/&gt;
+
+    &lt;context id=&quot;Mysql&quot; targetRuntime=&quot;MyBatis3Simple&quot; defaultModelType=&quot;flat&quot;&gt;
+        &lt;property name=&quot;beginningDelimiter&quot; value=&quot;`&quot;/&gt;
+        &lt;property name=&quot;endingDelimiter&quot; value=&quot;`&quot;/&gt;
+        
+        &lt;!-- 配置 tk.mybatis 插件 --&gt;
+        &lt;plugin type=&quot;tk.mybatis.mapper.generator.MapperPlugin&quot;&gt;
+            &lt;property name=&quot;mappers&quot; value=&quot;com.funtl.utils.MyMapper&quot;/&gt;
+        &lt;/plugin&gt;
+
+        &lt;!-- 配置数据库连接 --&gt;
+        &lt;jdbcConnection
+                driverClass=&quot;${jdbc.driverClass}&quot;
+                connectionURL=&quot;${jdbc.connectionURL}&quot;
+                userId=&quot;${jdbc.username}&quot;
+                password=&quot;${jdbc.password}&quot;&gt;
+        &lt;/jdbcConnection&gt;
+
+        &lt;!-- 配置实体类存放路径 --&gt;
+        &lt;javaModelGenerator targetPackage=&quot;com.funtl.hello.spring.boot.entity&quot; targetProject=&quot;src/main/java&quot;/&gt;
+
+        &lt;!-- 配置 XML 存放路径 --&gt;
+        &lt;sqlMapGenerator targetPackage=&quot;mapper&quot; targetProject=&quot;src/main/resources&quot;/&gt;
+
+        &lt;!-- 配置 DAO 存放路径 --&gt;
+        &lt;javaClientGenerator
+                targetPackage=&quot;com.funtl.hello.spring.boot.mapper&quot;
+                targetProject=&quot;src/main/java&quot;
+                type=&quot;XMLMAPPER&quot;/&gt;
+
+        &lt;!-- 配置需要指定生成的数据库和表，% 代表所有表 --&gt;
+        &lt;table catalog=&quot;myshop&quot; tableName=&quot;%&quot;&gt;
+            &lt;!-- mysql 配置 --&gt;
+            &lt;generatedKey column=&quot;id&quot; sqlStatement=&quot;Mysql&quot; identity=&quot;true&quot;/&gt;
+        &lt;/table&gt;
+    &lt;/context&gt;
+&lt;/generatorConfiguration&gt;
+</code></pre>
+
+<h2 id="配置数据源">配置数据源</h2>
+
+<p>在 <code>src/main/resources</code> 目录下创建 <code>jdbc.properties</code> 数据源配置：</p>
+
+<pre><code class="language-properties"># MySQL 8.x: com.mysql.cj.jdbc.Driver
+jdbc.driverClass=com.mysql.jdbc.Driver
+jdbc.connectionURL=jdbc:mysql://ip:port/dbname?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false
+jdbc.username=root
+jdbc.password=123456
+</code></pre>
+
+<h2 id="插件自动生成命令">插件自动生成命令</h2>
+
+<p><code>mvn mybatis-generator:generate</code></p>
+
+<p>成功生成控制台打印的消息，如：</p>
+
+<pre><code class="language-log">[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hello-spring-boot 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- mybatis-generator-maven-plugin:1.3.5:generate (default-cli) @ hello-spring-boot ---
+[INFO] Connecting to the Database
+[INFO] Introspecting table %
+[INFO] Generating Record class for table tb_order
+[INFO] Generating Mapper Interface for table tb_order
+[INFO] Generating SQL Map for table tb_order
+[INFO] Generating Record class for table tb_item_cat
+[INFO] Generating Mapper Interface for table tb_item_cat
+[INFO] Generating SQL Map for table tb_item_cat
+[INFO] Generating Record class for table tb_item_desc
+[INFO] Generating Mapper Interface for table tb_item_desc
+[INFO] Generating SQL Map for table tb_item_desc
+[INFO] Generating Record class for table tb_order_shipping
+[INFO] Generating Mapper Interface for table tb_order_shipping
+[INFO] Generating SQL Map for table tb_order_shipping
+[INFO] Generating Record class for table tb_user
+[INFO] Generating Mapper Interface for table tb_user
+[INFO] Generating SQL Map for table tb_user
+[INFO] Generating Record class for table tb_content
+[INFO] Generating Mapper Interface for table tb_content
+[INFO] Generating SQL Map for table tb_content
+[INFO] Generating Record class for table tb_item_param_item
+[INFO] Generating Mapper Interface for table tb_item_param_item
+...
+...
+</code></pre>
+
+<h2 id="完整配置案例">完整配置案例</h2>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE generatorConfiguration
+  PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;
+&quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;&gt;
+&lt;!-- 配置生成器 --&gt;
+&lt;generatorConfiguration&gt;
+&lt;!-- 可以用于加载配置项或者配置文件，在整个配置文件中就可以使用${propertyKey}的方式来引用配置项
+    resource：配置资源加载地址，使用resource，MBG从classpath开始找，比如com/myproject/generatorConfig.properties        
+    url：配置资源加载地质，使用URL的方式，比如file:///C:/myfolder/generatorConfig.properties.
+    注意，两个属性只能选址一个;
+    另外，如果使用了mybatis-generator-maven-plugin，那么在pom.xml中定义的properties都可以直接在generatorConfig.xml中使用
+&lt;properties resource=&quot;&quot; url=&quot;&quot; /&gt;
+ --&gt;
+ 
+ &lt;!-- 在MBG工作的时候，需要额外加载的依赖包
+     location属性指明加载jar/zip包的全路径
+&lt;classPathEntry location=&quot;/Program Files/IBM/SQLLIB/java/db2java.zip&quot; /&gt;
+  --&gt;
+ 
+&lt;!-- 
+    context:生成一组对象的环境 
+    id:必选，上下文id，用于在生成错误时提示
+    defaultModelType:指定生成对象的样式
+        1，conditional：类似hierarchical；
+        2，flat：所有内容（主键，blob）等全部生成在一个对象中；
+        3，hierarchical：主键生成一个XXKey对象(key class)，Blob等单独生成一个对象，其他简单属性在一个对象中(record class)
+    targetRuntime:
+        1，MyBatis3：默认的值，生成基于MyBatis3.x以上版本的内容，包括XXXBySample；
+        2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample；
+    introspectedColumnImpl：类全限定名，用于扩展MBG
+--&gt;
+&lt;context id=&quot;mysql&quot; defaultModelType=&quot;hierarchical&quot; targetRuntime=&quot;MyBatis3Simple&quot; &gt;
+ 
+    &lt;!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
+        一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
+     --&gt;
+    &lt;property name=&quot;autoDelimitKeywords&quot; value=&quot;false&quot;/&gt;
+    &lt;!-- 生成的Java文件的编码 --&gt;
+    &lt;property name=&quot;javaFileEncoding&quot; value=&quot;UTF-8&quot;/&gt;
+    &lt;!-- 格式化java代码 --&gt;
+    &lt;property name=&quot;javaFormatter&quot; value=&quot;org.mybatis.generator.api.dom.DefaultJavaFormatter&quot;/&gt;
+    &lt;!-- 格式化XML代码 --&gt;
+    &lt;property name=&quot;xmlFormatter&quot; value=&quot;org.mybatis.generator.api.dom.DefaultXmlFormatter&quot;/&gt;
+ 
+    &lt;!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； --&gt;
+    &lt;property name=&quot;beginningDelimiter&quot; value=&quot;`&quot;/&gt;
+    &lt;property name=&quot;endingDelimiter&quot; value=&quot;`&quot;/&gt;
+ 
+    &lt;!-- 必须要有的，使用这个配置链接数据库
+        @TODO:是否可以扩展
+        # MySQL 8.x: com.mysql.cj.jdbc.Driver
+     --&gt;
+    &lt;jdbcConnection driverClass=&quot;com.mysql.jdbc.Driver&quot; connectionURL=&quot;jdbc:mysql:///pss&quot; userId=&quot;root&quot; password=&quot;admin&quot;&gt;
+        &lt;!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 --&gt;
+    &lt;/jdbcConnection&gt;
+ 
+    &lt;!-- java类型处理器 
+        用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
+        注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和 NUMERIC数据类型； 
+    --&gt;
+    &lt;javaTypeResolver type=&quot;org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl&quot;&gt;
+        &lt;!-- 
+            true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+            false：默认,
+                scale&gt;0;length&gt;18：使用BigDecimal;
+                scale=0;length[10,18]：使用Long；
+                scale=0;length[5,9]：使用Integer；
+                scale=0;length&lt;5：使用Short；
+         --&gt;
+        &lt;property name=&quot;forceBigDecimals&quot; value=&quot;false&quot;/&gt;
+    &lt;/javaTypeResolver&gt;
+ 
+ 
+    &lt;!-- java模型创建器，是必须要的元素
+        负责：1，key类（见context的defaultModelType）；2，java类；3，查询类
+        targetPackage：生成的类要放的包，真实的包受enableSubPackages属性控制；
+        targetProject：目标项目，指定一个存在的目录下，生成的内容会放到指定目录中，如果目录不存在，MBG不会自动建目录
+     --&gt;
+    &lt;javaModelGenerator targetPackage=&quot;com._520it.mybatis.domain&quot; targetProject=&quot;src/main/java&quot;&gt;
+        &lt;!--  for MyBatis3/MyBatis3Simple
+            自动为每一个生成的类创建一个构造方法，构造方法包含了所有的field；而不是使用setter；
+         --&gt;
+        &lt;property name=&quot;constructorBased&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&gt;
+        &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot;/&gt;
+ 
+        &lt;!-- for MyBatis3 / MyBatis3Simple
+            是否创建一个不可变的类，如果为true，
+            那么MBG会创建一个没有setter方法的类，取而代之的是类似constructorBased的类
+         --&gt;
+        &lt;property name=&quot;immutable&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 设置一个根对象，
+            如果设置了这个根对象，那么生成的keyClass或者recordClass会继承这个类；在Table的rootClass属性中可以覆盖该选项
+            注意：如果在key class或者record class中有root class相同的属性，MBG就不会重新生成这些属性了，包括：
+                1，属性名相同，类型相同，有相同的getter/setter方法；
+         --&gt;
+        &lt;property name=&quot;rootClass&quot; value=&quot;com._520it.mybatis.domain.BaseDomain&quot;/&gt;
+ 
+        &lt;!-- 设置是否在getter方法中，对String类型字段调用trim()方法 --&gt;
+        &lt;property name=&quot;trimStrings&quot; value=&quot;true&quot;/&gt;
+    &lt;/javaModelGenerator&gt;
+ 
+ 
+    &lt;!-- 生成SQL map的XML文件生成器，
+        注意，在Mybatis3之后，我们可以使用mapper.xml文件+Mapper接口（或者不用mapper接口），
+            或者只使用Mapper接口+Annotation，所以，如果 javaClientGenerator配置中配置了需要生成XML的话，这个元素就必须配置
+        targetPackage/targetProject:同javaModelGenerator
+     --&gt;
+    &lt;sqlMapGenerator targetPackage=&quot;com._520it.mybatis.mapper&quot; targetProject=&quot;src/main/resources&quot;&gt;
+        &lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&gt;
+        &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot;/&gt;
+    &lt;/sqlMapGenerator&gt;
+ 
+ 
+    &lt;!-- 对于mybatis来说，即生成Mapper接口，注意，如果没有配置该元素，那么默认不会生成Mapper接口 
+        targetPackage/targetProject:同javaModelGenerator
+        type：选择怎么生成mapper接口（在MyBatis3/MyBatis3Simple下）：
+            1，ANNOTATEDMAPPER：会生成使用Mapper接口+Annotation的方式创建（SQL生成在annotation中），不会生成对应的XML；
+            2，MIXEDMAPPER：使用混合配置，会生成Mapper接口，并适当添加合适的Annotation，但是XML会生成在XML中；
+            3，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
+        注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER
+    --&gt;
+    &lt;javaClientGenerator targetPackage=&quot;com._520it.mybatis.mapper&quot; type=&quot;ANNOTATEDMAPPER&quot; targetProject=&quot;src/main/java&quot;&gt;
+        &lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&gt;
+        &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot;/&gt;
+ 
+        &lt;!-- 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查
+        &lt;property name=&quot;rootInterface&quot; value=&quot;&quot;/&gt;
+         --&gt;
+    &lt;/javaClientGenerator&gt;
+ 
+    &lt;!-- 选择一个table来生成相关文件，可以有一个或多个table，必须要有table元素
+        选择的table会生成一下文件：
+        1，SQL map文件
+        2，生成一个主键类；
+        3，除了BLOB和主键的其他字段的类；
+        4，包含BLOB的类；
+        5，一个用户生成动态查询的条件类（selectByExample, deleteByExample），可选；
+        6，Mapper接口（可选）
+        tableName（必要）：要生成对象的表名；
+        注意：大小写敏感问题。正常情况下，MBG会自动的去识别数据库标识符的大小写敏感度，在一般情况下，MBG会
+            根据设置的schema，catalog或tablename去查询数据表，按照下面的流程：
+            1，如果schema，catalog或tablename中有空格，那么设置的是什么格式，就精确的使用指定的大小写格式去查询；
+            2，否则，如果数据库的标识符使用大写的，那么MBG自动把表名变成大写再查找；
+            3，否则，如果数据库的标识符使用小写的，那么MBG自动把表名变成小写再查找；
+            4，否则，使用指定的大小写格式查询；
+        另外的，如果在创建表的时候，使用的&quot;&quot;把数据库对象规定大小写，就算数据库标识符是使用的大写，在这种情况下也会使用给定的大小写来创建表名；
+        这个时候，请设置delimitIdentifiers=&quot;true&quot;即可保留大小写格式；
+        可选：
+        1，schema：数据库的schema；
+        2，catalog：数据库的catalog；
+        3，alias：为数据表设置的别名，如果设置了alias，那么生成的所有的SELECT SQL语句中，列名会变成：alias_actualColumnName
+        4，domainObjectName：生成的domain类的名字，如果不设置，直接使用表名作为domain类的名字；可以设置为somepck.domainName，那么会自动把domainName类再放到somepck包里面；
+        5，enableInsert（默认true）：指定是否生成insert语句；
+        6，enableSelectByPrimaryKey（默认true）：指定是否生成按照主键查询对象的语句（就是getById或get）；
+        7，enableSelectByExample（默认true）：MyBatis3Simple为false，指定是否生成动态查询语句；
+        8，enableUpdateByPrimaryKey（默认true）：指定是否生成按照主键修改对象的语句（即update)；
+        9，enableDeleteByPrimaryKey（默认true）：指定是否生成按照主键删除对象的语句（即delete）；
+        10，enableDeleteByExample（默认true）：MyBatis3Simple为false，指定是否生成动态删除语句；
+        11，enableCountByExample（默认true）：MyBatis3Simple为false，指定是否生成动态查询总条数语句（用于分页的总条数查询）；
+        12，enableUpdateByExample（默认true）：MyBatis3Simple为false，指定是否生成动态修改语句（只修改对象中不为空的属性）；
+        13，modelType：参考context元素的defaultModelType，相当于覆盖；
+        14，delimitIdentifiers：参考tableName的解释，注意，默认的delimitIdentifiers是双引号，如果类似MYSQL这样的数据库，使用的是`（反引号，那么还需要设置context的beginningDelimiter和endingDelimiter属性）
+        15，delimitAllColumns：设置是否所有生成的SQL中的列名都使用标识符引起来。默认为false，delimitIdentifiers参考context的属性
+        注意，table里面很多参数都是对javaModelGenerator，context等元素的默认属性的一个复写；
+     --&gt;
+    &lt;table tableName=&quot;userinfo&quot; &gt;
+ 
+        &lt;!-- 参考 javaModelGenerator 的 constructorBased属性--&gt;
+        &lt;property name=&quot;constructorBased&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 默认为false，如果设置为true，在生成的SQL中，table名字不会加上catalog或schema； --&gt;
+        &lt;property name=&quot;ignoreQualifiersAtRuntime&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 参考 javaModelGenerator 的 immutable 属性 --&gt;
+        &lt;property name=&quot;immutable&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 指定是否只生成domain类，如果设置为true，只生成domain类，如果还配置了sqlMapGenerator，那么在mapper XML文件中，只生成resultMap元素 --&gt;
+        &lt;property name=&quot;modelOnly&quot; value=&quot;false&quot;/&gt;
+ 
+        &lt;!-- 参考 javaModelGenerator 的 rootClass 属性 
+        &lt;property name=&quot;rootClass&quot; value=&quot;&quot;/&gt;
+         --&gt;
+ 
+        &lt;!-- 参考javaClientGenerator 的  rootInterface 属性
+        &lt;property name=&quot;rootInterface&quot; value=&quot;&quot;/&gt;
+        --&gt;
+ 
+        &lt;!-- 如果设置了runtimeCatalog，那么在生成的SQL中，使用该指定的catalog，而不是table元素上的catalog 
+        &lt;property name=&quot;runtimeCatalog&quot; value=&quot;&quot;/&gt;
+        --&gt;
+ 
+        &lt;!-- 如果设置了runtimeSchema，那么在生成的SQL中，使用该指定的schema，而不是table元素上的schema 
+        &lt;property name=&quot;runtimeSchema&quot; value=&quot;&quot;/&gt;
+        --&gt;
+ 
+        &lt;!-- 如果设置了runtimeTableName，那么在生成的SQL中，使用该指定的tablename，而不是table元素上的tablename 
+        &lt;property name=&quot;runtimeTableName&quot; value=&quot;&quot;/&gt;
+        --&gt;
+ 
+        &lt;!-- 注意，该属性只针对MyBatis3Simple有用；
+            如果选择的runtime是MyBatis3Simple，那么会生成一个SelectAll方法，如果指定了selectAllOrderByClause，那么会在该SQL中添加指定的这个order条件；
+         --&gt;
+        &lt;property name=&quot;selectAllOrderByClause&quot; value=&quot;age desc,username asc&quot;/&gt;
+ 
+        &lt;!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate --&gt;
+        &lt;property name=&quot;useActualColumnNames&quot; value=&quot;false&quot;/&gt;
+ 
+ 
+        &lt;!-- generatedKey用于生成生成主键的方法，
+            如果设置了该元素，MBG会在生成的&lt;insert&gt;元素中生成一条正确的&lt;selectKey&gt;元素，该元素可选
+            column:主键的列名；
+            sqlStatement：要生成的selectKey语句，有以下可选项：
+                Cloudscape:相当于selectKey的SQL为： VALUES IDENTITY_VAL_LOCAL()
+                DB2       :相当于selectKey的SQL为： VALUES IDENTITY_VAL_LOCAL()
+                DB2_MF    :相当于selectKey的SQL为：SELECT IDENTITY_VAL_LOCAL() FROM SYSIBM.SYSDUMMY1
+                Derby      :相当于selectKey的SQL为：VALUES IDENTITY_VAL_LOCAL()
+                HSQLDB      :相当于selectKey的SQL为：CALL IDENTITY()
+                Informix  :相当于selectKey的SQL为：select dbinfo('sqlca.sqlerrd1') from systables where tabid=1
+                MySql      :相当于selectKey的SQL为：SELECT LAST_INSERT_ID()
+                SqlServer :相当于selectKey的SQL为：SELECT SCOPE_IDENTITY()
+                SYBASE      :相当于selectKey的SQL为：SELECT @@IDENTITY
+                JDBC      :相当于在生成的insert元素上添加useGeneratedKeys=&quot;true&quot;和keyProperty属性
+        &lt;generatedKey column=&quot;&quot; sqlStatement=&quot;&quot;/&gt;
+         --&gt;
+ 
+        &lt;!-- 
+            该元素会在根据表中列名计算对象属性名之前先重命名列名，非常适合用于表中的列都有公用的前缀字符串的时候，
+            比如列名为：CUST_ID,CUST_NAME,CUST_EMAIL,CUST_ADDRESS等；
+            那么就可以设置searchString为&quot;^CUST_&quot;，并使用空白替换，那么生成的Customer对象中的属性名称就不是
+            custId,custName等，而是先被替换为ID,NAME,EMAIL,然后变成属性：id，name，email；
+            注意，MBG是使用java.util.regex.Matcher.replaceAll来替换searchString和replaceString的，
+            如果使用了columnOverride元素，该属性无效；
+        &lt;columnRenamingRule searchString=&quot;&quot; replaceString=&quot;&quot;/&gt;
+         --&gt;
+ 
+ 
+         &lt;!-- 用来修改表中某个列的属性，MBG会使用修改后的列来生成domain的属性；
+             column:要重新设置的列名；
+             注意，一个table元素中可以有多个columnOverride元素哈~
+          --&gt;
+         &lt;columnOverride column=&quot;username&quot;&gt;
+             &lt;!-- 使用property属性来指定列要生成的属性名称 --&gt;
+             &lt;property name=&quot;property&quot; value=&quot;userName&quot;/&gt;
+ 
+             &lt;!-- javaType用于指定生成的domain的属性类型，使用类型的全限定名
+             &lt;property name=&quot;javaType&quot; value=&quot;&quot;/&gt;
+              --&gt;
+ 
+             &lt;!-- jdbcType用于指定该列的JDBC类型 
+             &lt;property name=&quot;jdbcType&quot; value=&quot;&quot;/&gt;
+              --&gt;
+ 
+             &lt;!-- typeHandler 用于指定该列使用到的TypeHandler，如果要指定，配置类型处理器的全限定名
+                 注意，mybatis中，不会生成到mybatis-config.xml中的typeHandler
+                 只会生成类似：where id = #{id,jdbcType=BIGINT,typeHandler=com._520it.mybatis.MyTypeHandler}的参数描述
+             &lt;property name=&quot;jdbcType&quot; value=&quot;&quot;/&gt;
+             --&gt;
+ 
+             &lt;!-- 参考table元素的delimitAllColumns配置，默认为false
+             &lt;property name=&quot;delimitedColumnName&quot; value=&quot;&quot;/&gt;
+              --&gt;
+         &lt;/columnOverride&gt;
+ 
+         &lt;!-- ignoreColumn设置一个MGB忽略的列，如果设置了改列，那么在生成的domain中，生成的SQL中，都不会有该列出现 
+             column:指定要忽略的列的名字；
+             delimitedColumnName：参考table元素的delimitAllColumns配置，默认为false
+             注意，一个table元素中可以有多个ignoreColumn元素
+         &lt;ignoreColumn column=&quot;deptId&quot; delimitedColumnName=&quot;&quot;/&gt;
+         --&gt;
+    &lt;/table&gt;
+ 
+&lt;/context&gt;
+ 
+&lt;/generatorConfiguration&gt;
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>LWAITING </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/>https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://ysongsong.github.io/tags/mybatis/">
+                    #Mybatis</a></span>
+            
+            <span class="tag"><a href="https://ysongsong.github.io/tags/springboot/">
+                    #SpringBoot</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://ysongsong.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/" class="prev" rel="prev" title="Spring Boot 整合Thymeleaf "><i class="iconfont icon-left"></i>&nbsp;Spring Boot 整合Thymeleaf </a>
+         
+        
+        <a href="https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/" class="next" rel="next" title="测试 MyBatis 操作数据库">测试 MyBatis 操作数据库&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://ysongsong.github.io/">LWAITING</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,3134 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LWAITING on LWAITING</title>
+    <link>https://ysongsong.github.io/</link>
+    <description>Recent content in LWAITING on LWAITING</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Hugo</title>
+      <link>https://ysongsong.github.io/about/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/about/</guid>
+      <description>&lt;p&gt;Hugo is the &lt;strong&gt;world’s fastest framework for building websites&lt;/strong&gt;. It is written in Go.&lt;/p&gt;
+
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/russross/blackfriday&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://ysongsong.github.io/2019/test/</link>
+      <pubDate>Tue, 11 Jun 2019 15:16:03 +0800</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/test/</guid>
+      <description>&lt;p&gt;Hugo is the &lt;strong&gt;world’s fastest framework for building websites&lt;/strong&gt;. It is written in Go.&lt;/p&gt;
+
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/russross/blackfriday&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring Cloud 服务配置</title>
+      <link>https://ysongsong.github.io/2019/springcloud%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 30 May 2019 15:50:03 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springcloud%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</guid>
+      <description>
+
+&lt;h1 id=&#34;spring-cloud-分布式配置中心&#34;&gt;Spring Cloud 分布式配置中心&lt;/h1&gt;
+
+&lt;h2 id=&#34;分布式配置中心服务端&#34;&gt;分布式配置中心服务端&lt;/h2&gt;
+
+&lt;p&gt;创建cinfig管理项目 &lt;code&gt;pom.xml&lt;/code&gt; 配置如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-config&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-config&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-config-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.config.ConfigApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;添加-application-yml-配置文件&#34;&gt;添加 &lt;code&gt;application.yml&lt;/code&gt;配置文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;spring:
+
+  application:
+    name: hello-spring-cloud-config
+
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: 远程仓库地址
+          search-paths: 路径
+          username: 用户名
+          password: 密码
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;添加启动类&#34;&gt;添加启动类&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;@SpringBootApplication
+@EnableEurekaClient
+@EnableConfigServer
+public class ConfigApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigApplication.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动测试&lt;/p&gt;
+
+&lt;p&gt;在远程仓库添加配置文件&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://localhost:8888/web-admin-feign/master&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;分布式配置中心客户端&#34;&gt;分布式配置中心客户端&lt;/h2&gt;
+
+&lt;p&gt;在客户端 &lt;code&gt;pomx.ml&lt;/code&gt; 文件中添加配置&lt;/p&gt;
+
+&lt;p&gt;对于客户端来说主要是增加了 &lt;code&gt;spring-cloud-starter-config&lt;/code&gt; 依赖&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;applicatiom.yml&lt;/code&gt; 增加配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cloud:
+    config:
+      uri: http://localhost:8888
+      name: web-admin-feign
+      label: master
+      profile: dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;进行测试即可&lt;/p&gt;
+
+&lt;p&gt;打包启动命令&lt;/p&gt;
+
+&lt;p&gt;java -jar hello-spring-cloud-web-admin-feign-1.0.0-SNAPSHOT.jar &amp;ndash;spring.profiles.active=pro&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://ysongsong.github.io/2019/maven/</link>
+      <pubDate>Thu, 16 May 2019 16:13:11 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/maven/</guid>
+      <description>&lt;p&gt;安装jar到本地&lt;/p&gt;
+
+&lt;p&gt;mvn install:install-file -Dfile=jar包路径 -DgroupId=groupId -DartifactId=artifactId -Dversion=版本 -Dpackaging=jar&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring Cloud 微服务架构(Finchley.RC1)</title>
+      <link>https://ysongsong.github.io/2019/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1/</link>
+      <pubDate>Tue, 14 May 2019 09:17:53 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20171126.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-spring-cloud-创建统一的依赖管理&#34;&gt;1、Spring Cloud 创建统一的依赖管理&lt;/h1&gt;
+
+&lt;p&gt;pom.xml配置文件如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.0.4.RELEASE&amp;lt;/version&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;groupId&amp;gt;com.lwaiting&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+    &amp;lt;packaging&amp;gt;pom&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-dependencies&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2018-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;properties&amp;gt;
+        &amp;lt;!-- Environment Settings --&amp;gt;
+        &amp;lt;java.version&amp;gt;1.8&amp;lt;/java.version&amp;gt;
+        &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt;
+        &amp;lt;project.reporting.outputEncoding&amp;gt;UTF-8&amp;lt;/project.reporting.outputEncoding&amp;gt;
+
+        &amp;lt;!-- Spring Settings --&amp;gt;
+        &amp;lt;spring-cloud.version&amp;gt;Finchley.RELEASE&amp;lt;/spring-cloud.version&amp;gt;
+    &amp;lt;/properties&amp;gt;
+
+    &amp;lt;dependencyManagement&amp;gt;
+        &amp;lt;dependencies&amp;gt;
+
+            &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+            &amp;lt;dependency&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+                &amp;lt;version&amp;gt;${spring-cloud.version}&amp;lt;/version&amp;gt;
+                &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;
+                &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;
+            &amp;lt;/dependency&amp;gt;
+            &amp;lt;!-- Spring Cloud End --&amp;gt;
+
+        &amp;lt;/dependencies&amp;gt;
+    &amp;lt;/dependencyManagement&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;!-- Compiler 插件, 设定 JDK 版本 --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;showWarnings&amp;gt;true&amp;lt;/showWarnings&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- 打包 jar 文件时，配置 manifest 文件，加入 lib 包的 jar 依赖 --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-jar-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;archive&amp;gt;
+                        &amp;lt;addMavenDescriptor&amp;gt;false&amp;lt;/addMavenDescriptor&amp;gt;
+                    &amp;lt;/archive&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+                &amp;lt;executions&amp;gt;
+                    &amp;lt;execution&amp;gt;
+                        &amp;lt;configuration&amp;gt;
+                            &amp;lt;archive&amp;gt;
+                                &amp;lt;manifest&amp;gt;
+                                    &amp;lt;!-- Add directory entries --&amp;gt;
+                                    &amp;lt;addDefaultImplementationEntries&amp;gt;true&amp;lt;/addDefaultImplementationEntries&amp;gt;
+                                    &amp;lt;addDefaultSpecificationEntries&amp;gt;true&amp;lt;/addDefaultSpecificationEntries&amp;gt;
+                                    &amp;lt;addClasspath&amp;gt;true&amp;lt;/addClasspath&amp;gt;
+                                &amp;lt;/manifest&amp;gt;
+                            &amp;lt;/archive&amp;gt;
+                        &amp;lt;/configuration&amp;gt;
+                    &amp;lt;/execution&amp;gt;
+                &amp;lt;/executions&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- resource --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-resources-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- install --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- clean --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-clean-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- ant --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-antrun-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;!-- dependency --&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-dependency-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+
+        &amp;lt;pluginManagement&amp;gt;
+            &amp;lt;plugins&amp;gt;
+                &amp;lt;!-- Java Document Generate --&amp;gt;
+                &amp;lt;plugin&amp;gt;
+                    &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;maven-javadoc-plugin&amp;lt;/artifactId&amp;gt;
+                    &amp;lt;executions&amp;gt;
+                        &amp;lt;execution&amp;gt;
+                            &amp;lt;phase&amp;gt;prepare-package&amp;lt;/phase&amp;gt;
+                            &amp;lt;goals&amp;gt;
+                                &amp;lt;goal&amp;gt;jar&amp;lt;/goal&amp;gt;
+                            &amp;lt;/goals&amp;gt;
+                        &amp;lt;/execution&amp;gt;
+                    &amp;lt;/executions&amp;gt;
+                &amp;lt;/plugin&amp;gt;
+
+                &amp;lt;!-- YUI Compressor (CSS/JS压缩) --&amp;gt;
+                &amp;lt;plugin&amp;gt;
+                    &amp;lt;groupId&amp;gt;net.alchim31.maven&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;yuicompressor-maven-plugin&amp;lt;/artifactId&amp;gt;
+                    &amp;lt;version&amp;gt;1.5.1&amp;lt;/version&amp;gt;
+                    &amp;lt;executions&amp;gt;
+                        &amp;lt;execution&amp;gt;
+                            &amp;lt;phase&amp;gt;prepare-package&amp;lt;/phase&amp;gt;
+                            &amp;lt;goals&amp;gt;
+                                &amp;lt;goal&amp;gt;compress&amp;lt;/goal&amp;gt;
+                            &amp;lt;/goals&amp;gt;
+                        &amp;lt;/execution&amp;gt;
+                    &amp;lt;/executions&amp;gt;
+                    &amp;lt;configuration&amp;gt;
+                        &amp;lt;encoding&amp;gt;UTF-8&amp;lt;/encoding&amp;gt;
+                        &amp;lt;jswarn&amp;gt;false&amp;lt;/jswarn&amp;gt;
+                        &amp;lt;nosuffix&amp;gt;true&amp;lt;/nosuffix&amp;gt;
+                        &amp;lt;linebreakpos&amp;gt;30000&amp;lt;/linebreakpos&amp;gt;
+                        &amp;lt;force&amp;gt;true&amp;lt;/force&amp;gt;
+                        &amp;lt;includes&amp;gt;
+                            &amp;lt;include&amp;gt;**/*.js&amp;lt;/include&amp;gt;
+                            &amp;lt;include&amp;gt;**/*.css&amp;lt;/include&amp;gt;
+                        &amp;lt;/includes&amp;gt;
+                        &amp;lt;excludes&amp;gt;
+                            &amp;lt;exclude&amp;gt;**/*.min.js&amp;lt;/exclude&amp;gt;
+                            &amp;lt;exclude&amp;gt;**/*.min.css&amp;lt;/exclude&amp;gt;
+                        &amp;lt;/excludes&amp;gt;
+                    &amp;lt;/configuration&amp;gt;
+                &amp;lt;/plugin&amp;gt;
+            &amp;lt;/plugins&amp;gt;
+        &amp;lt;/pluginManagement&amp;gt;
+
+        &amp;lt;!-- 资源文件配置 --&amp;gt;
+        &amp;lt;resources&amp;gt;
+            &amp;lt;resource&amp;gt;
+                &amp;lt;directory&amp;gt;src/main/java&amp;lt;/directory&amp;gt;
+                &amp;lt;excludes&amp;gt;
+                    &amp;lt;exclude&amp;gt;**/*.java&amp;lt;/exclude&amp;gt;
+                &amp;lt;/excludes&amp;gt;
+            &amp;lt;/resource&amp;gt;
+            &amp;lt;resource&amp;gt;
+                &amp;lt;directory&amp;gt;src/main/resources&amp;lt;/directory&amp;gt;
+            &amp;lt;/resource&amp;gt;
+        &amp;lt;/resources&amp;gt;
+    &amp;lt;/build&amp;gt;
+
+    &amp;lt;repositories&amp;gt;
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;aliyun-repos&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Aliyun Repository&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;sonatype-repos&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Sonatype Repository&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://oss.sonatype.org/content/groups/public&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;sonatype-repos-s&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Sonatype Repository&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/snapshot&amp;lt;/url&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+    &amp;lt;/repositories&amp;gt;
+
+    &amp;lt;pluginRepositories&amp;gt;
+        &amp;lt;pluginRepository&amp;gt;
+            &amp;lt;id&amp;gt;aliyun-repos&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Aliyun Repository&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/pluginRepository&amp;gt;
+    &amp;lt;/pluginRepositories&amp;gt;
+
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;2-spring-cloud-服务注册与发现&#34;&gt;2、Spring Cloud 服务注册与发现&lt;/h1&gt;
+
+&lt;p&gt;此处使用的是Spring Cloud Netflix 的 Eureka，Eureka 是一个服务注册和发现模块&lt;/p&gt;
+
+&lt;h2 id=&#34;创建服务注册中心&#34;&gt;创建服务注册中心&lt;/h2&gt;
+
+&lt;p&gt;pom.xml文件如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-eureka&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-eureka&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;com.funtl.itoken.eureka.EurekaApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aoolication.yml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  application:
+    name: hello-spring-cloud-eureka
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defautltZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;EurekaApplication启动类：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+/**
+ * @ClassName EurekaApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 9:21
+ */
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaApplication.class, args);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;3-spring-cloud-创建服务提供者&#34;&gt;3、Spring Cloud 创建服务提供者&lt;/h1&gt;
+
+&lt;p&gt;pom.xml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-service-admin&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-service-admin&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.service.admin.ServiceAdminApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;application.yml 配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  application:
+    name: hello-spring-cloud-service-admin
+
+server:
+  port: 8762
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ServiceAdminApplication启动类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.service.admin;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+/**
+ * @ClassName ServiceAdminApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 10:41
+ */
+@SpringBootApplication
+@EnableEurekaClient
+public class ServiceAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceAdminApplication.class, args);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;编写AdminController测试&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:02
+ */
+@RestController
+public class AdminController {
+
+    @Value(&amp;quot;${server.port}&amp;quot;)
+    private String port;
+
+    @GetMapping(&amp;quot;getMessage&amp;quot;)
+    public String getMessage(String message) {
+        return String.format(&amp;quot;you message is : %s port : %s&amp;quot;, message, port);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-创建服务消费者-ribbon-feign&#34;&gt;4、创建服务消费者（Ribbon/Feign）&lt;/h2&gt;
+
+&lt;p&gt;在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于 http restful 的。Spring cloud 的两种服务调用方式，一种是ribbon + restTemplate，另一种是feign。&lt;/p&gt;
+
+&lt;h3 id=&#34;ribbon-rest&#34;&gt;ribbon + rest&lt;/h3&gt;
+
+&lt;p&gt;Ribbon 是一个负载均衡客户端，可以很好的控制http和tcp的一些行为。&lt;/p&gt;
+
+&lt;p&gt;pom.xml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-web-admin-ribbon&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-web-admin-ribbon&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-ribbon&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+
+        &amp;lt;!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;net.sourceforge.nekohtml&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;nekohtml&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.web.admin.ribbon.WebAdminRibbonApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;application.yml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  application:
+    name: hello-spring-cloud-web-admin-ribbon
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8764
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加启动类WebAdminRibbonApplication&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.ribbon;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+/**
+ * @ClassName WebAdminRibbonApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:50
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加RestTemple配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.ribbon.config;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @ClassName RestTemplateConfiguration
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 14:54
+ */
+@Configuration
+public class RestTemplateConfiguration {
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;AdminService类编写&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.ribbon.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @ClassName AdminService
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 15:33
+ */
+@Service
+public class AdminService {
+
+    @Autowired
+    public RestTemplate restTemplate;
+
+    public String getMessage(String message) {
+        return restTemplate.getForObject(&amp;quot;http://hello-spring-cloud-service-admin/getMessage?message=&amp;quot; + message, String.class);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;AdminController编写并测试&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.ribbon.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import top.lwaiting.hello.spring.cloud.web.admin.ribbon.service.AdminService;
+
+/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 15:37
+ */
+@RestController
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @GetMapping(&amp;quot;getMessage&amp;quot;)
+    public String getMessage(String message) {
+        return adminService.getMessage(message);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;feign&#34;&gt;Feign&lt;/h3&gt;
+
+&lt;p&gt;pom.xml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-web-admin-feign&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-web-admin-feign&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-openfeign&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+
+        &amp;lt;!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;net.sourceforge.nekohtml&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;nekohtml&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.web.admin.feign.WebAdminRibbonApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;application.yml配置如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  application:
+    name: hello-spring-cloud-web-admin-feign
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加启动类WebAdminFeignApplication&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.feign;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+/**
+ * @ClassName WebAdminFeignApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:36
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients
+public class WebAdminFeignApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminFeignApplication.class, args);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加 Feign 接口 AdminService&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.feign.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * @ClassName AdminService
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:42
+ */
+@FeignClient(value = &amp;quot;hello-spring-cloud-service-admin&amp;quot;)
+public interface AdminService {
+
+    /**
+     * 获取信息
+     * @param message
+     * @return
+     */
+    @GetMapping(&amp;quot;getMessage&amp;quot;)
+    String getMessage(@RequestParam(value = &amp;quot;message&amp;quot;) String message);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加测试用的Controller&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.feign.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import top.lwaiting.hello.spring.cloud.web.admin.feign.service.AdminService;
+
+/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:47
+ */
+@RestController
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @GetMapping(&amp;quot;getMessage&amp;quot;)
+    public String getMessage(String message) {
+        return adminService.getMessage(message);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-使用熔断器防止服务雪崩&#34;&gt;5、使用熔断器防止服务雪崩&lt;/h2&gt;
+
+&lt;h3 id=&#34;在-ribbon-中使用熔断器&#34;&gt;在 Ribbon 中使用熔断器&lt;/h3&gt;
+
+&lt;p&gt;在 pom.xml 中增加依赖&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-hystrix&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在Application中增加@EnableHyHystrix注解&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package top.lwaiting.hello.spring.cloud.web.admin.ribbon;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+
+/**
+ * @ClassName WebAdminRibbonApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:50
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableHystrix
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在service中增加@Hysteri小Command注解&lt;/p&gt;
+
+&lt;p&gt;在Ribbon 调用方法上增加@HysterixCommand注解并指定 falfallbackMethod熔断方法&lt;/p&gt;
+
+&lt;h3 id=&#34;在-feign-中使用熔断器&#34;&gt;在 Feign 中使用熔断器&lt;/h3&gt;
+
+&lt;p&gt;Feign是自带熔断器的，但默认是关闭的。需要在配置文件中打开它，在配置文件增加以下代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;feign:
+  hystrix:
+    enable: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在Service中增加fallback指定类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@FeignClient(value = &amp;quot;hello-spring-cloud-service-admin&amp;quot;, fallback = AdminServiceHystrix.class)
+
+public interface AdminService {
+
+    /**
+     * 获取信息
+     * @param message
+     * @return
+     */
+    @GetMapping(&amp;quot;getMessage&amp;quot;)
+    String getMessage(@RequestParam(value = &amp;quot;message&amp;quot;) String message);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;创建熔断器类并实现对应的Feign接口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Component
+public class AdminServiceHystrix implements AdminService {
+    @Override
+    public String getMessage(String message) {
+        return String.format(&amp;quot;Hi your message is : %s, but request error&amp;quot;, message);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;进行测试&lt;/p&gt;
+
+&lt;h2 id=&#34;6-spring-cloud-使用熔断器仪表盘监控&#34;&gt;6、Spring Cloud 使用熔断器仪表盘监控&lt;/h2&gt;
+
+&lt;p&gt;在 Ribbon 和 Feign 项目中增加 Hytrix 仪表盘功能，两个项目的改造方式相同&lt;/p&gt;
+
+&lt;h4 id=&#34;在-pom-xml-中增加依赖&#34;&gt;在 &lt;code&gt;pom.xml&lt;/code&gt;中增加依赖&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!-- 熔断器仪表盘 --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-hystrix-dashboard&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;在-application-中增加-enablehystrixdashboard-注解&#34;&gt;在 Application 中增加 @EnableHystrixDashboard 注解&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@SpringBootApplication
+
+@EnableDiscoveryClient
+
+@EnableHystrix
+@EnableHystrixDashboard
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;创建-hystrix-stream-的-servlet-配置&#34;&gt;创建 hystrix.stream 的 Servlet 配置&lt;/h4&gt;
+
+&lt;p&gt;Spring Boot 2.x 版本开启 HystrixDashboard 与 Spring Boot 1.x 的方式略有不同，需要增加一个 HystrixMetricsStreamServlet 的配置，代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Configuration
+public class HystrixDashboardConfiguration {
+
+    public ServletRegistrationBean getServlet() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings(&amp;quot;hystrix.stream&amp;quot;);
+        registrationBean.setName(&amp;quot;HystrixMetricsStreamServlet&amp;quot;);
+        return registrationBean;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;7-spring-cloud-使用路由网关统一访问接口&#34;&gt;7、Spring Cloud 使用路由网关统一访问接口&lt;/h2&gt;
+
+&lt;h4 id=&#34;pom-xml-配置如下&#34;&gt;&lt;code&gt;pom.xml&lt;/code&gt;  配置如下：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;artifactId&amp;gt;hello-spring-cloud-zuul&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-cloud-zuul&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt;
+    &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- Spring Boot Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Boot End --&amp;gt;
+
+        &amp;lt;!-- Spring Cloud Begin --&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-zuul&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;!-- Spring Cloud End --&amp;gt;
+
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.zuul.ZuulApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;application-yml-配置如下&#34;&gt;&lt;code&gt;application.yml&lt;/code&gt; 配置如下：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  application:
+    name: hello-spring-cloud-zuul
+
+server:
+  port: 8769
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: hello-spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: hello-spring-cloud-web-admin-feign
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;创建启动类-zuulapplication-class&#34;&gt;创建启动类 &lt;code&gt;ZuulApplication.class&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;@EnableZuulProxy&lt;/code&gt; 开启 Zuul 功能&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@SpringBootApplication
+@EnableEurekaClient
+@EnableZuulProxy
+public class ZuulApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ZuulApplication.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;路由调用失败的处理类&#34;&gt;路由调用失败的处理类&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Component
+public class WebAdminFeignFallbackProvider implements FallbackProvider {
+    @Override
+    public String getRoute() {
+        // serviceId, 如果需要所有调用都支持回退，则 return &amp;quot;*&amp;quot; 或 return &amp;quot;null&amp;quot;
+        return &amp;quot;hello-spring-cloud-web-admin-feign&amp;quot;;
+    }
+
+    /**
+     * 如果请求服务失败，则返回指定信息给调用者
+     * @param route
+     * @param cause
+     * @return
+     */
+    @Override
+    public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
+        return new ClientHttpResponse() {
+            /**
+             * 网关向 api 请求失败了，但是消费者客户端向网关发起的请求是成功的，
+             * 不应该吧 api 的 404、500 等问题抛给客户端
+             * 网关和 api 服务集群对于客户端来说是黑盒
+             * @return
+             * @throws IOException
+             */
+            @Override
+            public HttpStatus getStatusCode() throws IOException {
+                return HttpStatus.OK;
+            }
+
+            @Override
+            public int getRawStatusCode() throws IOException {
+                return HttpStatus.OK.value();
+            }
+
+            @Override
+            public String getStatusText() throws IOException {
+                return HttpStatus.OK.getReasonPhrase();
+            }
+
+            @Override
+            public void close() {
+
+            }
+
+            @Override
+            public InputStream getBody() throws IOException {
+                ObjectMapper objectMapper = new ObjectMapper();
+                Map&amp;lt;String, Object&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
+                map.put(&amp;quot;status&amp;quot;, 200);
+                map.put(&amp;quot;message&amp;quot;, &amp;quot;无法连接，请检查网络&amp;quot;);
+                return new ByteArrayInputStream(objectMapper.writeValueAsString(map).getBytes(&amp;quot;UTF-8&amp;quot;));
+            }
+
+            @Override
+            public HttpHeaders getHeaders() {
+                HttpHeaders headers = new HttpHeaders();
+                // 和 getBody 中内容编码一致
+                headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+                return headers;
+            }
+        };
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;8-spring-cloud-使用路由网关的服务过滤功能&#34;&gt;8、Spring Cloud 使用路由网关的服务过滤功能&lt;/h2&gt;
+
+&lt;h4 id=&#34;创建服务过滤器&#34;&gt;创建服务过滤器&lt;/h4&gt;
+
+&lt;p&gt;继承 &lt;code&gt;ZuulFilter&lt;/code&gt; 类并在类上增加 &lt;code&gt;@Component&lt;/code&gt; 注解就可以使用服务过滤功能了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Component
+public class LoginFilter extends ZuulFilter {
+    @Override
+    public String filterType() {
+        return &amp;quot;pre&amp;quot;;
+    }
+
+    @Override
+    public int filterOrder() {
+        return 0;
+    }
+
+    @Override
+    public boolean shouldFilter() {
+        return true;
+    }
+
+    @Override
+    public Object run() throws ZuulException {
+        RequestContext currentContext = RequestContext.getCurrentContext();
+        HttpServletRequest request = currentContext.getRequest();
+        String token = request.getParameter(&amp;quot;token&amp;quot;);
+        if (token == null) {
+            currentContext.setSendZuulResponse(false);
+            currentContext.setResponseStatusCode(401);
+            try {
+                HttpServletResponse response = currentContext.getResponse();
+                response.setContentType(&amp;quot;text/html;charset=utf-8&amp;quot;);
+                response.getWriter().write(&amp;quot;非法请求！&amp;quot;);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>测试 MyBatis 操作数据库</title>
+      <link>https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Mon, 13 May 2019 11:40:38 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20180210.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;测试-mybatis-操作数据库&#34;&gt;测试 MyBatis 操作数据库&lt;/h1&gt;
+
+&lt;p&gt;我们以测试操作用户表为例（tb_user）&lt;/p&gt;
+
+&lt;h2 id=&#34;修改入口类&#34;&gt;修改入口类&lt;/h2&gt;
+
+&lt;p&gt;需要使用 &lt;code&gt;@MapperScan&lt;/code&gt; 注解来指定 Mapper 接口的路径&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS：&lt;/strong&gt; 注意这里的 &lt;code&gt;@MapperScan&lt;/code&gt; 注解是 &lt;code&gt;tk.mybatis.spring.annotation.MapperScan;&lt;/code&gt;包下的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.funtl.hello.spring.boot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
+
+@SpringBootApplication
+@MapperScan(basePackages = &amp;quot;com.funtl.hello.spring.boot.mapper&amp;quot;)
+public class HelloSpringBootApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HelloSpringBootApplication.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建测试类&#34;&gt;创建测试类&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.funtl.hello.spring.boot;
+
+import com.funtl.hello.spring.boot.entity.TbUser;
+import com.funtl.hello.spring.boot.mapper.TbUserMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
+
+import java.util.Date;
+import java.util.List;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = HelloSpringBootApplication.class)
+@Transactional
+@Rollback
+public class MyBatisTests {
+
+    /**
+     * 注入数据查询接口
+     */
+    @Autowired
+    private TbUserMapper tbUserMapper;
+
+    /**
+     * 测试插入数据
+     */
+    @Test
+    public void testInsert() {
+        // 构造一条测试数据
+        TbUser tbUser = new TbUser();
+        tbUser.setUsername(&amp;quot;Lusifer&amp;quot;);
+        tbUser.setPassword(&amp;quot;123456&amp;quot;);
+        tbUser.setPhone(&amp;quot;15888888888&amp;quot;);
+        tbUser.setEmail(&amp;quot;topsale@vip.qq.com&amp;quot;);
+        tbUser.setCreated(new Date());
+        tbUser.setUpdated(new Date());
+
+        // 插入数据
+        tbUserMapper.insert(tbUser);
+    }
+
+    /**
+     * 测试删除数据
+     */
+    @Test
+    public void testDelete() {
+        // 构造条件，等同于 DELETE from tb_user WHERE username = &#39;Lusifer&#39;
+        Example example = new Example(TbUser.class);
+        example.createCriteria().andEqualTo(&amp;quot;username&amp;quot;, &amp;quot;Lusifer&amp;quot;);
+
+        // 删除数据
+        tbUserMapper.deleteByExample(example);
+    }
+
+    /**
+     * 测试修改数据
+     */
+    @Test
+    public void testUpdate() {
+        // 构造条件
+        Example example = new Example(TbUser.class);
+        example.createCriteria().andEqualTo(&amp;quot;username&amp;quot;, &amp;quot;Lusifer&amp;quot;);
+
+        // 构造一条测试数据
+        TbUser tbUser = new TbUser();
+        tbUser.setUsername(&amp;quot;LusiferNew&amp;quot;);
+        tbUser.setPassword(&amp;quot;123456&amp;quot;);
+        tbUser.setPhone(&amp;quot;15888888888&amp;quot;);
+        tbUser.setEmail(&amp;quot;topsale@vip.qq.com&amp;quot;);
+        tbUser.setCreated(new Date());
+        tbUser.setUpdated(new Date());
+
+        // 修改数据
+        tbUserMapper.updateByExample(tbUser, example);
+    }
+
+    /**
+     * 测试查询集合
+     */
+    @Test
+    public void testSelect() {
+        List&amp;lt;TbUser&amp;gt; tbUsers = tbUserMapper.selectAll();
+        for (TbUser tbUser : tbUsers) {
+            System.out.println(tbUser.getUsername());
+        }
+    }
+
+    /**
+     * 测试分页查询
+     */
+    @Test
+    public void testPage() {
+        // PageHelper 使用非常简单，只需要设置页码和每页显示笔数即可
+        PageHelper.startPage(0, 2);
+
+        // 设置分页查询条件
+        Example example = new Example(TbUser.class);
+        PageInfo&amp;lt;TbUser&amp;gt; pageInfo = new PageInfo&amp;lt;&amp;gt;(tbUserMapper.selectByExample(example));
+
+        // 获取查询结果
+        List&amp;lt;TbUser&amp;gt; tbUsers = pageInfo.getList();
+        for (TbUser tbUser : tbUsers) {
+            System.out.println(tbUser.getUsername());
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;附-完整的-pom&#34;&gt;附：完整的 POM&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;groupId&amp;gt;com.funtl&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;hello-spring-boot&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-boot&amp;lt;/name&amp;gt;
+    &amp;lt;description&amp;gt;&amp;lt;/description&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.0.2.RELEASE&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;properties&amp;gt;
+        &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt;
+        &amp;lt;project.reporting.outputEncoding&amp;gt;UTF-8&amp;lt;/project.reporting.outputEncoding&amp;gt;
+        &amp;lt;java.version&amp;gt;1.8&amp;lt;/java.version&amp;gt;
+    &amp;lt;/properties&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;druid-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.1.10&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;tk.mybatis&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;mapper-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;2.0.2&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;com.github.pagehelper&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;pagehelper-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.2.5&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;net.sourceforge.nekohtml&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;nekohtml&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.9.22&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;com.funtl.hello.spring.boot.HelloSpringBootApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.mybatis.generator&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;mybatis-generator-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;version&amp;gt;1.3.5&amp;lt;/version&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;configurationFile&amp;gt;${basedir}/src/main/resources/generator/generatorConfig.xml&amp;lt;/configurationFile&amp;gt;
+                    &amp;lt;overwrite&amp;gt;true&amp;lt;/overwrite&amp;gt;
+                    &amp;lt;verbose&amp;gt;true&amp;lt;/verbose&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+                &amp;lt;dependencies&amp;gt;
+                    &amp;lt;dependency&amp;gt;
+                        &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+                        &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+                        &amp;lt;version&amp;gt;${mysql.version}&amp;lt;/version&amp;gt;
+                    &amp;lt;/dependency&amp;gt;
+                    &amp;lt;dependency&amp;gt;
+                        &amp;lt;groupId&amp;gt;tk.mybatis&amp;lt;/groupId&amp;gt;
+                        &amp;lt;artifactId&amp;gt;mapper&amp;lt;/artifactId&amp;gt;
+                        &amp;lt;version&amp;gt;3.4.4&amp;lt;/version&amp;gt;
+                    &amp;lt;/dependency&amp;gt;
+                &amp;lt;/dependencies&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot-MyBatis 整合</title>
+      <link>https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/</link>
+      <pubDate>Mon, 13 May 2019 11:37:19 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20180210.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;spring-boot-整合-druid&#34;&gt;Spring Boot 整合 Druid&lt;/h1&gt;
+
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+
+&lt;p&gt;Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。&lt;/p&gt;
+
+&lt;p&gt;Druid 是目前最好的数据库连接池，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。Druid 已经在阿里巴巴部署了超过 600 个应用，经过多年生产环境大规模部署的严苛考验。Druid 是阿里巴巴开发的号称为监控而生的数据库连接池！&lt;/p&gt;
+
+&lt;h2 id=&#34;引入依赖&#34;&gt;引入依赖&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;pom.xml&lt;/code&gt; 文件中引入 &lt;code&gt;druid-spring-boot-starter&lt;/code&gt; 依赖&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;druid-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.1.10&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;引入数据库连接依赖&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+    &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;配置-application-yml&#34;&gt;配置 &lt;code&gt;application.yml&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;application.yml&lt;/code&gt; 中配置数据库连接&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://ip:port/dbname?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;spring-boot-整合-tk-mybatis&#34;&gt;Spring Boot 整合 tk.mybatis&lt;/h1&gt;
+
+&lt;p&gt;tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更加高效&lt;/p&gt;
+
+&lt;h2 id=&#34;引入依赖-1&#34;&gt;引入依赖&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;pom.xml&lt;/code&gt; 文件中引入 &lt;code&gt;mapper-spring-boot-starter&lt;/code&gt; 依赖，该依赖会自动引入 MyBaits 相关依赖&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;tk.mybatis&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mapper-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.0.2&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;配置-application-yml-1&#34;&gt;配置 &lt;code&gt;application.yml&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;配置 MyBatis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;mybatis:
+    type-aliases-package: 实体类的存放路径，如：com.funtl.hello.spring.boot.entity
+    mapper-locations: classpath:mapper/*.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建一个通用的父级接口&#34;&gt;创建一个通用的父级接口&lt;/h2&gt;
+
+&lt;p&gt;主要作用是让 DAO 层的接口继承该接口，以达到使用 tk.mybatis 的目的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.funtl.utils;
+
+import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.common.MySqlMapper;
+
+/**
+ * 自己的 Mapper
+ * 特别注意，该接口不能被扫描到，否则会出错
+ * &amp;lt;p&amp;gt;Title: MyMapper&amp;lt;/p&amp;gt;
+ * &amp;lt;p&amp;gt;Description: &amp;lt;/p&amp;gt;
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/5/29 0:57
+ */
+public interface MyMapper&amp;lt;T&amp;gt; extends Mapper&amp;lt;T&amp;gt;, MySqlMapper&amp;lt;T&amp;gt; {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;spring-boot-整合-pagehelper&#34;&gt;Spring Boot 整合 PageHelper&lt;/h1&gt;
+
+&lt;p&gt;PageHelper 是 Mybatis 的分页插件，支持多数据库、多数据源。可以简化数据库的分页查询操作，整合过程也极其简单，只需引入依赖即可。&lt;/p&gt;
+
+&lt;h2 id=&#34;引入依赖-2&#34;&gt;引入依赖&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;pom.xml&lt;/code&gt; 文件中引入 &lt;code&gt;pagehelper-spring-boot-starter&lt;/code&gt; 依赖&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.github.pagehelper&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;pagehelper-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.2.5&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;使用-mybatis-的-maven-插件生成代码&#34;&gt;使用 MyBatis 的 Maven 插件生成代码&lt;/h1&gt;
+
+&lt;p&gt;我们无需手动编写 实体类、DAO、XML 配置文件，只需要使用 MyBatis 提供的一个 Maven 插件就可以自动生成所需的各种文件便能够满足基本的业务需求，如果业务比较复杂只需要修改相关文件即可。&lt;/p&gt;
+
+&lt;h2 id=&#34;配置插件&#34;&gt;配置插件&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;pom.xml&lt;/code&gt; 文件中增加 &lt;code&gt;mybatis-generator-maven-plugin&lt;/code&gt; 插件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;groupId&amp;gt;org.mybatis.generator&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;mybatis-generator-maven-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.3.5&amp;lt;/version&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;configurationFile&amp;gt;${basedir}/src/main/resources/generator/generatorConfig.xml&amp;lt;/configurationFile&amp;gt;
+                &amp;lt;overwrite&amp;gt;true&amp;lt;/overwrite&amp;gt;
+                &amp;lt;verbose&amp;gt;true&amp;lt;/verbose&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+            &amp;lt;dependencies&amp;gt;
+                &amp;lt;dependency&amp;gt;
+                    &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+                    &amp;lt;version&amp;gt;${mysql.version}&amp;lt;/version&amp;gt;
+                &amp;lt;/dependency&amp;gt;
+                &amp;lt;dependency&amp;gt;
+                    &amp;lt;groupId&amp;gt;tk.mybatis&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;mapper&amp;lt;/artifactId&amp;gt;
+                    &amp;lt;version&amp;gt;3.4.4&amp;lt;/version&amp;gt;
+                &amp;lt;/dependency&amp;gt;
+            &amp;lt;/dependencies&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;configurationFile：自动生成所需的配置文件路径&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;自动生成的配置&#34;&gt;自动生成的配置&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;src/main/resources/generator/&lt;/code&gt; 目录下创建 &lt;code&gt;generatorConfig.xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE generatorConfiguration
+        PUBLIC &amp;quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&amp;quot;
+        &amp;quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&amp;quot;&amp;gt;
+
+&amp;lt;generatorConfiguration&amp;gt;
+    &amp;lt;!-- 引入数据库连接配置 --&amp;gt;
+    &amp;lt;properties resource=&amp;quot;jdbc.properties&amp;quot;/&amp;gt;
+
+    &amp;lt;context id=&amp;quot;Mysql&amp;quot; targetRuntime=&amp;quot;MyBatis3Simple&amp;quot; defaultModelType=&amp;quot;flat&amp;quot;&amp;gt;
+        &amp;lt;property name=&amp;quot;beginningDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt;
+        &amp;lt;property name=&amp;quot;endingDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt;
+        
+        &amp;lt;!-- 配置 tk.mybatis 插件 --&amp;gt;
+        &amp;lt;plugin type=&amp;quot;tk.mybatis.mapper.generator.MapperPlugin&amp;quot;&amp;gt;
+            &amp;lt;property name=&amp;quot;mappers&amp;quot; value=&amp;quot;com.funtl.utils.MyMapper&amp;quot;/&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+
+        &amp;lt;!-- 配置数据库连接 --&amp;gt;
+        &amp;lt;jdbcConnection
+                driverClass=&amp;quot;${jdbc.driverClass}&amp;quot;
+                connectionURL=&amp;quot;${jdbc.connectionURL}&amp;quot;
+                userId=&amp;quot;${jdbc.username}&amp;quot;
+                password=&amp;quot;${jdbc.password}&amp;quot;&amp;gt;
+        &amp;lt;/jdbcConnection&amp;gt;
+
+        &amp;lt;!-- 配置实体类存放路径 --&amp;gt;
+        &amp;lt;javaModelGenerator targetPackage=&amp;quot;com.funtl.hello.spring.boot.entity&amp;quot; targetProject=&amp;quot;src/main/java&amp;quot;/&amp;gt;
+
+        &amp;lt;!-- 配置 XML 存放路径 --&amp;gt;
+        &amp;lt;sqlMapGenerator targetPackage=&amp;quot;mapper&amp;quot; targetProject=&amp;quot;src/main/resources&amp;quot;/&amp;gt;
+
+        &amp;lt;!-- 配置 DAO 存放路径 --&amp;gt;
+        &amp;lt;javaClientGenerator
+                targetPackage=&amp;quot;com.funtl.hello.spring.boot.mapper&amp;quot;
+                targetProject=&amp;quot;src/main/java&amp;quot;
+                type=&amp;quot;XMLMAPPER&amp;quot;/&amp;gt;
+
+        &amp;lt;!-- 配置需要指定生成的数据库和表，% 代表所有表 --&amp;gt;
+        &amp;lt;table catalog=&amp;quot;myshop&amp;quot; tableName=&amp;quot;%&amp;quot;&amp;gt;
+            &amp;lt;!-- mysql 配置 --&amp;gt;
+            &amp;lt;generatedKey column=&amp;quot;id&amp;quot; sqlStatement=&amp;quot;Mysql&amp;quot; identity=&amp;quot;true&amp;quot;/&amp;gt;
+        &amp;lt;/table&amp;gt;
+    &amp;lt;/context&amp;gt;
+&amp;lt;/generatorConfiguration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;配置数据源&#34;&gt;配置数据源&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;src/main/resources&lt;/code&gt; 目录下创建 &lt;code&gt;jdbc.properties&lt;/code&gt; 数据源配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-properties&#34;&gt;# MySQL 8.x: com.mysql.cj.jdbc.Driver
+jdbc.driverClass=com.mysql.jdbc.Driver
+jdbc.connectionURL=jdbc:mysql://ip:port/dbname?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;useSSL=false
+jdbc.username=root
+jdbc.password=123456
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;插件自动生成命令&#34;&gt;插件自动生成命令&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;mvn mybatis-generator:generate&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;成功生成控制台打印的消息，如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-log&#34;&gt;[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hello-spring-boot 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- mybatis-generator-maven-plugin:1.3.5:generate (default-cli) @ hello-spring-boot ---
+[INFO] Connecting to the Database
+[INFO] Introspecting table %
+[INFO] Generating Record class for table tb_order
+[INFO] Generating Mapper Interface for table tb_order
+[INFO] Generating SQL Map for table tb_order
+[INFO] Generating Record class for table tb_item_cat
+[INFO] Generating Mapper Interface for table tb_item_cat
+[INFO] Generating SQL Map for table tb_item_cat
+[INFO] Generating Record class for table tb_item_desc
+[INFO] Generating Mapper Interface for table tb_item_desc
+[INFO] Generating SQL Map for table tb_item_desc
+[INFO] Generating Record class for table tb_order_shipping
+[INFO] Generating Mapper Interface for table tb_order_shipping
+[INFO] Generating SQL Map for table tb_order_shipping
+[INFO] Generating Record class for table tb_user
+[INFO] Generating Mapper Interface for table tb_user
+[INFO] Generating SQL Map for table tb_user
+[INFO] Generating Record class for table tb_content
+[INFO] Generating Mapper Interface for table tb_content
+[INFO] Generating SQL Map for table tb_content
+[INFO] Generating Record class for table tb_item_param_item
+[INFO] Generating Mapper Interface for table tb_item_param_item
+...
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;完整配置案例&#34;&gt;完整配置案例&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE generatorConfiguration
+  PUBLIC &amp;quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&amp;quot;
+&amp;quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&amp;quot;&amp;gt;
+&amp;lt;!-- 配置生成器 --&amp;gt;
+&amp;lt;generatorConfiguration&amp;gt;
+&amp;lt;!-- 可以用于加载配置项或者配置文件，在整个配置文件中就可以使用${propertyKey}的方式来引用配置项
+    resource：配置资源加载地址，使用resource，MBG从classpath开始找，比如com/myproject/generatorConfig.properties        
+    url：配置资源加载地质，使用URL的方式，比如file:///C:/myfolder/generatorConfig.properties.
+    注意，两个属性只能选址一个;
+    另外，如果使用了mybatis-generator-maven-plugin，那么在pom.xml中定义的properties都可以直接在generatorConfig.xml中使用
+&amp;lt;properties resource=&amp;quot;&amp;quot; url=&amp;quot;&amp;quot; /&amp;gt;
+ --&amp;gt;
+ 
+ &amp;lt;!-- 在MBG工作的时候，需要额外加载的依赖包
+     location属性指明加载jar/zip包的全路径
+&amp;lt;classPathEntry location=&amp;quot;/Program Files/IBM/SQLLIB/java/db2java.zip&amp;quot; /&amp;gt;
+  --&amp;gt;
+ 
+&amp;lt;!-- 
+    context:生成一组对象的环境 
+    id:必选，上下文id，用于在生成错误时提示
+    defaultModelType:指定生成对象的样式
+        1，conditional：类似hierarchical；
+        2，flat：所有内容（主键，blob）等全部生成在一个对象中；
+        3，hierarchical：主键生成一个XXKey对象(key class)，Blob等单独生成一个对象，其他简单属性在一个对象中(record class)
+    targetRuntime:
+        1，MyBatis3：默认的值，生成基于MyBatis3.x以上版本的内容，包括XXXBySample；
+        2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample；
+    introspectedColumnImpl：类全限定名，用于扩展MBG
+--&amp;gt;
+&amp;lt;context id=&amp;quot;mysql&amp;quot; defaultModelType=&amp;quot;hierarchical&amp;quot; targetRuntime=&amp;quot;MyBatis3Simple&amp;quot; &amp;gt;
+ 
+    &amp;lt;!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
+        一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
+     --&amp;gt;
+    &amp;lt;property name=&amp;quot;autoDelimitKeywords&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+    &amp;lt;!-- 生成的Java文件的编码 --&amp;gt;
+    &amp;lt;property name=&amp;quot;javaFileEncoding&amp;quot; value=&amp;quot;UTF-8&amp;quot;/&amp;gt;
+    &amp;lt;!-- 格式化java代码 --&amp;gt;
+    &amp;lt;property name=&amp;quot;javaFormatter&amp;quot; value=&amp;quot;org.mybatis.generator.api.dom.DefaultJavaFormatter&amp;quot;/&amp;gt;
+    &amp;lt;!-- 格式化XML代码 --&amp;gt;
+    &amp;lt;property name=&amp;quot;xmlFormatter&amp;quot; value=&amp;quot;org.mybatis.generator.api.dom.DefaultXmlFormatter&amp;quot;/&amp;gt;
+ 
+    &amp;lt;!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； --&amp;gt;
+    &amp;lt;property name=&amp;quot;beginningDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt;
+    &amp;lt;property name=&amp;quot;endingDelimiter&amp;quot; value=&amp;quot;`&amp;quot;/&amp;gt;
+ 
+    &amp;lt;!-- 必须要有的，使用这个配置链接数据库
+        @TODO:是否可以扩展
+        # MySQL 8.x: com.mysql.cj.jdbc.Driver
+     --&amp;gt;
+    &amp;lt;jdbcConnection driverClass=&amp;quot;com.mysql.jdbc.Driver&amp;quot; connectionURL=&amp;quot;jdbc:mysql:///pss&amp;quot; userId=&amp;quot;root&amp;quot; password=&amp;quot;admin&amp;quot;&amp;gt;
+        &amp;lt;!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 --&amp;gt;
+    &amp;lt;/jdbcConnection&amp;gt;
+ 
+    &amp;lt;!-- java类型处理器 
+        用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
+        注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和 NUMERIC数据类型； 
+    --&amp;gt;
+    &amp;lt;javaTypeResolver type=&amp;quot;org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl&amp;quot;&amp;gt;
+        &amp;lt;!-- 
+            true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+            false：默认,
+                scale&amp;gt;0;length&amp;gt;18：使用BigDecimal;
+                scale=0;length[10,18]：使用Long；
+                scale=0;length[5,9]：使用Integer；
+                scale=0;length&amp;lt;5：使用Short；
+         --&amp;gt;
+        &amp;lt;property name=&amp;quot;forceBigDecimals&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+    &amp;lt;/javaTypeResolver&amp;gt;
+ 
+ 
+    &amp;lt;!-- java模型创建器，是必须要的元素
+        负责：1，key类（见context的defaultModelType）；2，java类；3，查询类
+        targetPackage：生成的类要放的包，真实的包受enableSubPackages属性控制；
+        targetProject：目标项目，指定一个存在的目录下，生成的内容会放到指定目录中，如果目录不存在，MBG不会自动建目录
+     --&amp;gt;
+    &amp;lt;javaModelGenerator targetPackage=&amp;quot;com._520it.mybatis.domain&amp;quot; targetProject=&amp;quot;src/main/java&amp;quot;&amp;gt;
+        &amp;lt;!--  for MyBatis3/MyBatis3Simple
+            自动为每一个生成的类创建一个构造方法，构造方法包含了所有的field；而不是使用setter；
+         --&amp;gt;
+        &amp;lt;property name=&amp;quot;constructorBased&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&amp;gt;
+        &amp;lt;property name=&amp;quot;enableSubPackages&amp;quot; value=&amp;quot;true&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- for MyBatis3 / MyBatis3Simple
+            是否创建一个不可变的类，如果为true，
+            那么MBG会创建一个没有setter方法的类，取而代之的是类似constructorBased的类
+         --&amp;gt;
+        &amp;lt;property name=&amp;quot;immutable&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 设置一个根对象，
+            如果设置了这个根对象，那么生成的keyClass或者recordClass会继承这个类；在Table的rootClass属性中可以覆盖该选项
+            注意：如果在key class或者record class中有root class相同的属性，MBG就不会重新生成这些属性了，包括：
+                1，属性名相同，类型相同，有相同的getter/setter方法；
+         --&amp;gt;
+        &amp;lt;property name=&amp;quot;rootClass&amp;quot; value=&amp;quot;com._520it.mybatis.domain.BaseDomain&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 设置是否在getter方法中，对String类型字段调用trim()方法 --&amp;gt;
+        &amp;lt;property name=&amp;quot;trimStrings&amp;quot; value=&amp;quot;true&amp;quot;/&amp;gt;
+    &amp;lt;/javaModelGenerator&amp;gt;
+ 
+ 
+    &amp;lt;!-- 生成SQL map的XML文件生成器，
+        注意，在Mybatis3之后，我们可以使用mapper.xml文件+Mapper接口（或者不用mapper接口），
+            或者只使用Mapper接口+Annotation，所以，如果 javaClientGenerator配置中配置了需要生成XML的话，这个元素就必须配置
+        targetPackage/targetProject:同javaModelGenerator
+     --&amp;gt;
+    &amp;lt;sqlMapGenerator targetPackage=&amp;quot;com._520it.mybatis.mapper&amp;quot; targetProject=&amp;quot;src/main/resources&amp;quot;&amp;gt;
+        &amp;lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&amp;gt;
+        &amp;lt;property name=&amp;quot;enableSubPackages&amp;quot; value=&amp;quot;true&amp;quot;/&amp;gt;
+    &amp;lt;/sqlMapGenerator&amp;gt;
+ 
+ 
+    &amp;lt;!-- 对于mybatis来说，即生成Mapper接口，注意，如果没有配置该元素，那么默认不会生成Mapper接口 
+        targetPackage/targetProject:同javaModelGenerator
+        type：选择怎么生成mapper接口（在MyBatis3/MyBatis3Simple下）：
+            1，ANNOTATEDMAPPER：会生成使用Mapper接口+Annotation的方式创建（SQL生成在annotation中），不会生成对应的XML；
+            2，MIXEDMAPPER：使用混合配置，会生成Mapper接口，并适当添加合适的Annotation，但是XML会生成在XML中；
+            3，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
+        注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER
+    --&amp;gt;
+    &amp;lt;javaClientGenerator targetPackage=&amp;quot;com._520it.mybatis.mapper&amp;quot; type=&amp;quot;ANNOTATEDMAPPER&amp;quot; targetProject=&amp;quot;src/main/java&amp;quot;&amp;gt;
+        &amp;lt;!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false --&amp;gt;
+        &amp;lt;property name=&amp;quot;enableSubPackages&amp;quot; value=&amp;quot;true&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查
+        &amp;lt;property name=&amp;quot;rootInterface&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+         --&amp;gt;
+    &amp;lt;/javaClientGenerator&amp;gt;
+ 
+    &amp;lt;!-- 选择一个table来生成相关文件，可以有一个或多个table，必须要有table元素
+        选择的table会生成一下文件：
+        1，SQL map文件
+        2，生成一个主键类；
+        3，除了BLOB和主键的其他字段的类；
+        4，包含BLOB的类；
+        5，一个用户生成动态查询的条件类（selectByExample, deleteByExample），可选；
+        6，Mapper接口（可选）
+        tableName（必要）：要生成对象的表名；
+        注意：大小写敏感问题。正常情况下，MBG会自动的去识别数据库标识符的大小写敏感度，在一般情况下，MBG会
+            根据设置的schema，catalog或tablename去查询数据表，按照下面的流程：
+            1，如果schema，catalog或tablename中有空格，那么设置的是什么格式，就精确的使用指定的大小写格式去查询；
+            2，否则，如果数据库的标识符使用大写的，那么MBG自动把表名变成大写再查找；
+            3，否则，如果数据库的标识符使用小写的，那么MBG自动把表名变成小写再查找；
+            4，否则，使用指定的大小写格式查询；
+        另外的，如果在创建表的时候，使用的&amp;quot;&amp;quot;把数据库对象规定大小写，就算数据库标识符是使用的大写，在这种情况下也会使用给定的大小写来创建表名；
+        这个时候，请设置delimitIdentifiers=&amp;quot;true&amp;quot;即可保留大小写格式；
+        可选：
+        1，schema：数据库的schema；
+        2，catalog：数据库的catalog；
+        3，alias：为数据表设置的别名，如果设置了alias，那么生成的所有的SELECT SQL语句中，列名会变成：alias_actualColumnName
+        4，domainObjectName：生成的domain类的名字，如果不设置，直接使用表名作为domain类的名字；可以设置为somepck.domainName，那么会自动把domainName类再放到somepck包里面；
+        5，enableInsert（默认true）：指定是否生成insert语句；
+        6，enableSelectByPrimaryKey（默认true）：指定是否生成按照主键查询对象的语句（就是getById或get）；
+        7，enableSelectByExample（默认true）：MyBatis3Simple为false，指定是否生成动态查询语句；
+        8，enableUpdateByPrimaryKey（默认true）：指定是否生成按照主键修改对象的语句（即update)；
+        9，enableDeleteByPrimaryKey（默认true）：指定是否生成按照主键删除对象的语句（即delete）；
+        10，enableDeleteByExample（默认true）：MyBatis3Simple为false，指定是否生成动态删除语句；
+        11，enableCountByExample（默认true）：MyBatis3Simple为false，指定是否生成动态查询总条数语句（用于分页的总条数查询）；
+        12，enableUpdateByExample（默认true）：MyBatis3Simple为false，指定是否生成动态修改语句（只修改对象中不为空的属性）；
+        13，modelType：参考context元素的defaultModelType，相当于覆盖；
+        14，delimitIdentifiers：参考tableName的解释，注意，默认的delimitIdentifiers是双引号，如果类似MYSQL这样的数据库，使用的是`（反引号，那么还需要设置context的beginningDelimiter和endingDelimiter属性）
+        15，delimitAllColumns：设置是否所有生成的SQL中的列名都使用标识符引起来。默认为false，delimitIdentifiers参考context的属性
+        注意，table里面很多参数都是对javaModelGenerator，context等元素的默认属性的一个复写；
+     --&amp;gt;
+    &amp;lt;table tableName=&amp;quot;userinfo&amp;quot; &amp;gt;
+ 
+        &amp;lt;!-- 参考 javaModelGenerator 的 constructorBased属性--&amp;gt;
+        &amp;lt;property name=&amp;quot;constructorBased&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 默认为false，如果设置为true，在生成的SQL中，table名字不会加上catalog或schema； --&amp;gt;
+        &amp;lt;property name=&amp;quot;ignoreQualifiersAtRuntime&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 参考 javaModelGenerator 的 immutable 属性 --&amp;gt;
+        &amp;lt;property name=&amp;quot;immutable&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 指定是否只生成domain类，如果设置为true，只生成domain类，如果还配置了sqlMapGenerator，那么在mapper XML文件中，只生成resultMap元素 --&amp;gt;
+        &amp;lt;property name=&amp;quot;modelOnly&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 参考 javaModelGenerator 的 rootClass 属性 
+        &amp;lt;property name=&amp;quot;rootClass&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+         --&amp;gt;
+ 
+        &amp;lt;!-- 参考javaClientGenerator 的  rootInterface 属性
+        &amp;lt;property name=&amp;quot;rootInterface&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+        --&amp;gt;
+ 
+        &amp;lt;!-- 如果设置了runtimeCatalog，那么在生成的SQL中，使用该指定的catalog，而不是table元素上的catalog 
+        &amp;lt;property name=&amp;quot;runtimeCatalog&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+        --&amp;gt;
+ 
+        &amp;lt;!-- 如果设置了runtimeSchema，那么在生成的SQL中，使用该指定的schema，而不是table元素上的schema 
+        &amp;lt;property name=&amp;quot;runtimeSchema&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+        --&amp;gt;
+ 
+        &amp;lt;!-- 如果设置了runtimeTableName，那么在生成的SQL中，使用该指定的tablename，而不是table元素上的tablename 
+        &amp;lt;property name=&amp;quot;runtimeTableName&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+        --&amp;gt;
+ 
+        &amp;lt;!-- 注意，该属性只针对MyBatis3Simple有用；
+            如果选择的runtime是MyBatis3Simple，那么会生成一个SelectAll方法，如果指定了selectAllOrderByClause，那么会在该SQL中添加指定的这个order条件；
+         --&amp;gt;
+        &amp;lt;property name=&amp;quot;selectAllOrderByClause&amp;quot; value=&amp;quot;age desc,username asc&amp;quot;/&amp;gt;
+ 
+        &amp;lt;!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate --&amp;gt;
+        &amp;lt;property name=&amp;quot;useActualColumnNames&amp;quot; value=&amp;quot;false&amp;quot;/&amp;gt;
+ 
+ 
+        &amp;lt;!-- generatedKey用于生成生成主键的方法，
+            如果设置了该元素，MBG会在生成的&amp;lt;insert&amp;gt;元素中生成一条正确的&amp;lt;selectKey&amp;gt;元素，该元素可选
+            column:主键的列名；
+            sqlStatement：要生成的selectKey语句，有以下可选项：
+                Cloudscape:相当于selectKey的SQL为： VALUES IDENTITY_VAL_LOCAL()
+                DB2       :相当于selectKey的SQL为： VALUES IDENTITY_VAL_LOCAL()
+                DB2_MF    :相当于selectKey的SQL为：SELECT IDENTITY_VAL_LOCAL() FROM SYSIBM.SYSDUMMY1
+                Derby      :相当于selectKey的SQL为：VALUES IDENTITY_VAL_LOCAL()
+                HSQLDB      :相当于selectKey的SQL为：CALL IDENTITY()
+                Informix  :相当于selectKey的SQL为：select dbinfo(&#39;sqlca.sqlerrd1&#39;) from systables where tabid=1
+                MySql      :相当于selectKey的SQL为：SELECT LAST_INSERT_ID()
+                SqlServer :相当于selectKey的SQL为：SELECT SCOPE_IDENTITY()
+                SYBASE      :相当于selectKey的SQL为：SELECT @@IDENTITY
+                JDBC      :相当于在生成的insert元素上添加useGeneratedKeys=&amp;quot;true&amp;quot;和keyProperty属性
+        &amp;lt;generatedKey column=&amp;quot;&amp;quot; sqlStatement=&amp;quot;&amp;quot;/&amp;gt;
+         --&amp;gt;
+ 
+        &amp;lt;!-- 
+            该元素会在根据表中列名计算对象属性名之前先重命名列名，非常适合用于表中的列都有公用的前缀字符串的时候，
+            比如列名为：CUST_ID,CUST_NAME,CUST_EMAIL,CUST_ADDRESS等；
+            那么就可以设置searchString为&amp;quot;^CUST_&amp;quot;，并使用空白替换，那么生成的Customer对象中的属性名称就不是
+            custId,custName等，而是先被替换为ID,NAME,EMAIL,然后变成属性：id，name，email；
+            注意，MBG是使用java.util.regex.Matcher.replaceAll来替换searchString和replaceString的，
+            如果使用了columnOverride元素，该属性无效；
+        &amp;lt;columnRenamingRule searchString=&amp;quot;&amp;quot; replaceString=&amp;quot;&amp;quot;/&amp;gt;
+         --&amp;gt;
+ 
+ 
+         &amp;lt;!-- 用来修改表中某个列的属性，MBG会使用修改后的列来生成domain的属性；
+             column:要重新设置的列名；
+             注意，一个table元素中可以有多个columnOverride元素哈~
+          --&amp;gt;
+         &amp;lt;columnOverride column=&amp;quot;username&amp;quot;&amp;gt;
+             &amp;lt;!-- 使用property属性来指定列要生成的属性名称 --&amp;gt;
+             &amp;lt;property name=&amp;quot;property&amp;quot; value=&amp;quot;userName&amp;quot;/&amp;gt;
+ 
+             &amp;lt;!-- javaType用于指定生成的domain的属性类型，使用类型的全限定名
+             &amp;lt;property name=&amp;quot;javaType&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+              --&amp;gt;
+ 
+             &amp;lt;!-- jdbcType用于指定该列的JDBC类型 
+             &amp;lt;property name=&amp;quot;jdbcType&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+              --&amp;gt;
+ 
+             &amp;lt;!-- typeHandler 用于指定该列使用到的TypeHandler，如果要指定，配置类型处理器的全限定名
+                 注意，mybatis中，不会生成到mybatis-config.xml中的typeHandler
+                 只会生成类似：where id = #{id,jdbcType=BIGINT,typeHandler=com._520it.mybatis.MyTypeHandler}的参数描述
+             &amp;lt;property name=&amp;quot;jdbcType&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+             --&amp;gt;
+ 
+             &amp;lt;!-- 参考table元素的delimitAllColumns配置，默认为false
+             &amp;lt;property name=&amp;quot;delimitedColumnName&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+              --&amp;gt;
+         &amp;lt;/columnOverride&amp;gt;
+ 
+         &amp;lt;!-- ignoreColumn设置一个MGB忽略的列，如果设置了改列，那么在生成的domain中，生成的SQL中，都不会有该列出现 
+             column:指定要忽略的列的名字；
+             delimitedColumnName：参考table元素的delimitAllColumns配置，默认为false
+             注意，一个table元素中可以有多个ignoreColumn元素
+         &amp;lt;ignoreColumn column=&amp;quot;deptId&amp;quot; delimitedColumnName=&amp;quot;&amp;quot;/&amp;gt;
+         --&amp;gt;
+    &amp;lt;/table&amp;gt;
+ 
+&amp;lt;/context&amp;gt;
+ 
+&amp;lt;/generatorConfiguration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 整合Thymeleaf </title>
+      <link>https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/</link>
+      <pubDate>Mon, 13 May 2019 11:25:40 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20171126.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;引入依赖&#34;&gt;引入依赖&lt;/h2&gt;
+
+&lt;p&gt;主要增加 &lt;code&gt;spring-boot-starter-thymeleaf&lt;/code&gt; 和 &lt;code&gt;nekohtml&lt;/code&gt; 这两个依赖&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spring-boot-starter-thymeleaf&lt;/code&gt;：Thymeleaf 自动配置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nekohtml&lt;/code&gt;：允许使用非严格的 HTML 语法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;完整的 &lt;code&gt;pom.xml&lt;/code&gt; 如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;groupId&amp;gt;com.funtl&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;hello-spring-boot&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;name&amp;gt;hello-spring-boot&amp;lt;/name&amp;gt;
+    &amp;lt;description&amp;gt;&amp;lt;/description&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.0.2.RELEASE&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+    &amp;lt;properties&amp;gt;
+        &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt;
+        &amp;lt;project.reporting.outputEncoding&amp;gt;UTF-8&amp;lt;/project.reporting.outputEncoding&amp;gt;
+        &amp;lt;java.version&amp;gt;1.8&amp;lt;/java.version&amp;gt;
+    &amp;lt;/properties&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;net.sourceforge.nekohtml&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;nekohtml&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.9.22&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;mainClass&amp;gt;com.funtl.hello.spring.boot.HelloSpringBootApplication&amp;lt;/mainClass&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;在-application-yml-中配置-thymeleaf&#34;&gt;在 &lt;code&gt;application.yml&lt;/code&gt; 中配置 Thymeleaf&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;spring:
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: HTML # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建测试用-javabean&#34;&gt;创建测试用 JavaBean&lt;/h2&gt;
+
+&lt;p&gt;创建一个测试效果的 JavaBean，简单封装一下即可&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.funtl.hello.spring.boot.entity;
+
+import java.io.Serializable;
+
+public class PersonBean implements Serializable {
+
+    private String name;
+    private Integer age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+} 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建测试用-controller&#34;&gt;创建测试用 Controller&lt;/h2&gt;
+
+&lt;p&gt;创建一个 Controller，造一些测试数据并设置跳转&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.funtl.hello.spring.boot.controller;
+
+import com.funtl.hello.spring.boot.entity.PersonBean;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller
+@RequestMapping(value = &amp;quot;thymeleaf&amp;quot;)
+public class IndexController {
+
+    @RequestMapping(value = &amp;quot;index&amp;quot;, method = RequestMethod.GET)
+    public String index(Model model) {
+        PersonBean person = new PersonBean();
+        person.setName(&amp;quot;张三&amp;quot;);
+        person.setAge(22);
+
+        List&amp;lt;PersonBean&amp;gt; people = new ArrayList&amp;lt;&amp;gt;();
+        PersonBean p1 = new PersonBean();
+        p1.setName(&amp;quot;李四&amp;quot;);
+        p1.setAge(23);
+        people.add(p1);
+
+        PersonBean p2 = new PersonBean();
+        p2.setName(&amp;quot;王五&amp;quot;);
+        p2.setAge(24);
+        people.add(p2);
+
+        PersonBean p3 = new PersonBean();
+        p3.setName(&amp;quot;赵六&amp;quot;);
+        p3.setAge(25);
+        people.add(p3);
+
+        model.addAttribute(&amp;quot;person&amp;quot;, person);
+        model.addAttribute(&amp;quot;people&amp;quot;, people);
+
+        return &amp;quot;index&amp;quot;;
+    }
+} 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建测试页面&#34;&gt;创建测试页面&lt;/h2&gt;
+
+&lt;p&gt;在 &lt;code&gt;templates&lt;/code&gt; 目录下创建 &lt;code&gt;index.html&lt;/code&gt; 文件，代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
+&amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Hello Thymeleaf&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;span&amp;gt;访问 Model：&amp;lt;/span&amp;gt;&amp;lt;span th:text=&amp;quot;${person.name}&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;span&amp;gt;访问列表&amp;lt;/span&amp;gt;
+        &amp;lt;table&amp;gt;
+            &amp;lt;thead&amp;gt;
+                &amp;lt;tr&amp;gt;
+                    &amp;lt;th&amp;gt;姓名&amp;lt;/th&amp;gt;
+                    &amp;lt;th&amp;gt;年龄&amp;lt;/th&amp;gt;
+                &amp;lt;/tr&amp;gt;
+            &amp;lt;/thead&amp;gt;
+            &amp;lt;tbody&amp;gt;
+                &amp;lt;tr th:each=&amp;quot;human : ${people}&amp;quot;&amp;gt;
+                    &amp;lt;td th:text=&amp;quot;${human.name}&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+                    &amp;lt;td th:text=&amp;quot;${human.age}&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+                &amp;lt;/tr&amp;gt;
+            &amp;lt;/tbody&amp;gt;
+        &amp;lt;/table&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 &lt;code&gt;th:*&lt;/code&gt; 语法，声明如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
+&amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;测试访问&#34;&gt;测试访问&lt;/h2&gt;
+
+&lt;p&gt;启动成功后，访问：&lt;a href=&#34;http://localhost:9090/thymeleaf/index&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://localhost:9090/thymeleaf/index&lt;/a&gt; 即可看到效果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.funtl.com/assets/Lusifer1527518261.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot相关</title>
+      <link>https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 13 May 2019 11:17:12 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20190405.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;spring-boot-常用配置&#34;&gt;Spring Boot 常用配置&lt;/h2&gt;
+
+&lt;p&gt;Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。&lt;/p&gt;
+
+&lt;h3 id=&#34;自定义-banner&#34;&gt;自定义 Banner&lt;/h3&gt;
+
+&lt;p&gt;在 Spring Boot 启动的时候会有一个默认的启动图案&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
+ /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.8.RELEASE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们在 &lt;code&gt;src/main/resources&lt;/code&gt; 目录下新建一个 banner.txt&lt;/p&gt;
+
+&lt;p&gt;通过 &lt;a href=&#34;http://patorjk.com/software/taag&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://patorjk.com/software/taag&lt;/a&gt; 网站生成字符串，将网站生成的字符复制到 banner.txt 中&lt;/p&gt;
+
+&lt;p&gt;再次运行这个程序&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;${AnsiColor.BRIGHT_RED}
+////////////////////////////////////////////////////////////////////
+//                          _ooOoo_                               //
+//                         o8888888o                              //
+//                         88&amp;quot; . &amp;quot;88                              //
+//                         (| ^_^ |)                              //
+//                         O\  =  /O                              //
+//                      ____/`---&#39;\____                           //
+//                    .&#39;  \\|     |//  `.                         //
+//                   /  \\|||  :  |||//  \                        //
+//                  /  _||||| -:- |||||-  \                       //
+//                  |   | \\\  -  /// |   |                       //
+//                  | \_|  &#39;&#39;\---/&#39;&#39;  |   |                       //
+//                  \  .-\__  `-`  ___/-. /                       //
+//                ___`. .&#39;  /--.--\  `. . ___                     //
+//              .&amp;quot;&amp;quot; &#39;&amp;lt;  `.___\_&amp;lt;|&amp;gt;_/___.&#39;  &amp;gt;&#39;&amp;quot;&amp;quot;.                  //
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //
+//      ========`-.____`-.___\_____/___.-`____.-&#39;========         //
+//                           `=---=&#39;                              //
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
+//            佛祖保佑       永不宕机     永无BUG                  //
+////////////////////////////////////////////////////////////////////
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;常用属性设置：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;${AnsiColor.BRIGHT_RED}&lt;/code&gt;：设置控制台中输出内容的颜色&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${application.version}&lt;/code&gt;：用来获取 &lt;code&gt;MANIFEST.MF&lt;/code&gt; 文件中的版本号&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${application.formatted-version}&lt;/code&gt;：格式化后的 &lt;code&gt;${application.version}&lt;/code&gt; 版本信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${spring-boot.version}&lt;/code&gt;：Spring Boot 的版本号&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${spring-boot.formatted-version}&lt;/code&gt;：格式化后的 &lt;code&gt;${spring-boot.version}&lt;/code&gt; 版本信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+
+&lt;p&gt;Spring Boot 项目使用一个全局的配置文件 &lt;code&gt;application.properties&lt;/code&gt; 或者是 &lt;code&gt;application.yml&lt;/code&gt;，在 &lt;code&gt;resources&lt;/code&gt; 目录下或者类路径下的 &lt;code&gt;/config&lt;/code&gt; 下，一般我们放到 &lt;code&gt;resources&lt;/code&gt; 下。&lt;/p&gt;
+
+&lt;p&gt;修改 Tomcat 的端口为 9090，并将默认的访问路径 &amp;ldquo;/&amp;rdquo; 修改为 &amp;ldquo;boot&amp;rdquo;，可以在 &lt;code&gt;application.properties&lt;/code&gt; 中添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server.port=9090
+server.context-path=/boot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或在 application.yml 中添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server:
+  port: 9090
+  context-path: /boot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;日志配置&#34;&gt;日志配置&lt;/h3&gt;
+
+&lt;p&gt;Spring Boot 对各种日志框架都做了支持，我们可以通过配置来修改默认的日志的配置&lt;/p&gt;
+
+&lt;p&gt;默认情况下，Spring Boot 使用 Logback 作为日志框架&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;logging:
+  file: ../logs/spring-boot-hello.log
+  level.org.springframework.web: DEBUG
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;关闭特定的自动配置&#34;&gt;关闭特定的自动配置&lt;/h2&gt;
+
+&lt;p&gt;关闭特定的自动配置使用 &lt;code&gt;@SpringBootApplication&lt;/code&gt; 注解的 &lt;code&gt;exclude&lt;/code&gt; 参数即可，这里以关闭数据源的自动配置为例&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux目录结构</title>
+      <link>https://ysongsong.github.io/2019/linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Fri, 10 May 2019 10:17:34 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://img.hacpai.com/bing/20190428.jpg?imageView2/1/w/960/h/540/interlace/1/q/100&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.funtl.com/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20171102134832.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;linux文件目录结构&#34;&gt;Linux文件目录结构&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;目录&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bin&lt;/td&gt;
+&lt;td&gt;存放二进制可执行文件(ls,cat,mkdir等)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;boot&lt;/td&gt;
+&lt;td&gt;存放用于系统引导时使用的各种文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;dev&lt;/td&gt;
+&lt;td&gt;用于存放设备文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;etc&lt;/td&gt;
+&lt;td&gt;存放系统配置文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;home&lt;/td&gt;
+&lt;td&gt;存放所有用户文件的根目录&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;lib&lt;/td&gt;
+&lt;td&gt;存放跟文件系统中的程序运行所需要的共享库及内核模块&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;mnt&lt;/td&gt;
+&lt;td&gt;系统管理员安装临时文件系统的安装点&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;opt&lt;/td&gt;
+&lt;td&gt;额外安装的可选应用程序包所放置的位置&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;proc&lt;/td&gt;
+&lt;td&gt;虚拟文件系统，存放当前内存的映射&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;root&lt;/td&gt;
+&lt;td&gt;超级用户目录&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;sbin&lt;/td&gt;
+&lt;td&gt;存放二进制可执行文件，只有root才能访问&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tmp&lt;/td&gt;
+&lt;td&gt;用于存放各种临时文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;usr&lt;/td&gt;
+&lt;td&gt;用于存放系统应用程序，比较重要的目录/usr/local 本地管理员软件安装目录&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;var&lt;/td&gt;
+&lt;td&gt;用于存放运行时需要改变数据的文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;linux文件操作命令&#34;&gt;Linux文件操作命令&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;语法&lt;/th&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;参数说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ls&lt;/td&gt;
+&lt;td&gt;显示文件和目录列表&lt;/td&gt;
+&lt;td&gt;ls [-alrtAFR] [name&amp;hellip;]&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-l&lt;/td&gt;
+&lt;td&gt;列出文件的详细信息&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-a&lt;/td&gt;
+&lt;td&gt;列出当前目录所有文件，包含隐藏文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;mkdir&lt;/td&gt;
+&lt;td&gt;创建目录&lt;/td&gt;
+&lt;td&gt;mkdir [-p] dirName&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-p&lt;/td&gt;
+&lt;td&gt;父目录不存在情况下先生成父目录&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cd&lt;/td&gt;
+&lt;td&gt;切换目录&lt;/td&gt;
+&lt;td&gt;cd [dirName]&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;touch&lt;/td&gt;
+&lt;td&gt;生成一个空文件&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;echo&lt;/td&gt;
+&lt;td&gt;生成一个带内容文件&lt;/td&gt;
+&lt;td&gt;echo abcd &amp;gt; 1.txt，echo 1234 &amp;gt;&amp;gt; 1.txt&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cat&lt;/td&gt;
+&lt;td&gt;显示文本文件内容&lt;/td&gt;
+&lt;td&gt;cat [-AbeEnstTuv] [&amp;ndash;help] [&amp;ndash;version] fileName&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cp&lt;/td&gt;
+&lt;td&gt;复制文件或目录&lt;/td&gt;
+&lt;td&gt;cp [options] source dest&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;rm&lt;/td&gt;
+&lt;td&gt;删除文件&lt;/td&gt;
+&lt;td&gt;rm [options] name&amp;hellip;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-f&lt;/td&gt;
+&lt;td&gt;强制删除文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-r&lt;/td&gt;
+&lt;td&gt;同时删除该目录下的所有文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;mv&lt;/td&gt;
+&lt;td&gt;移动文件或目录&lt;/td&gt;
+&lt;td&gt;mv [options] source dest&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;find&lt;/td&gt;
+&lt;td&gt;在文件系统中查找指定的文件&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-name&lt;/td&gt;
+&lt;td&gt;文件名&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;grep&lt;/td&gt;
+&lt;td&gt;在指定的文本文件中查找指定的字符串&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tree&lt;/td&gt;
+&lt;td&gt;用于以树状图列出目录的内容&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pwd&lt;/td&gt;
+&lt;td&gt;显示当前工作目录&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ln&lt;/td&gt;
+&lt;td&gt;建立软链接&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;more&lt;/td&gt;
+&lt;td&gt;分页显示文本文件内容&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;head&lt;/td&gt;
+&lt;td&gt;显示文件开头内容&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tail&lt;/td&gt;
+&lt;td&gt;显示文件结尾内容&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-f&lt;/td&gt;
+&lt;td&gt;跟踪输出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;linux-系统管理命令&#34;&gt;Linux 系统管理命令&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;stat&lt;/td&gt;
+&lt;td&gt;显示指定文件的相关信息,比ls命令显示内容更多&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;who&lt;/td&gt;
+&lt;td&gt;显示在线登录用户&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;hostname&lt;/td&gt;
+&lt;td&gt;显示主机名称&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;uname&lt;/td&gt;
+&lt;td&gt;显示系统信息&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;top&lt;/td&gt;
+&lt;td&gt;显示当前系统中耗费资源最多的进程&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ps&lt;/td&gt;
+&lt;td&gt;显示瞬间的进程状态&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;du&lt;/td&gt;
+&lt;td&gt;显示指定的文件（目录）已使用的磁盘空间的总量&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;df&lt;/td&gt;
+&lt;td&gt;显示文件系统磁盘空间的使用情况&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;free&lt;/td&gt;
+&lt;td&gt;显示当前内存和交换空间的使用情况&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ifconfig&lt;/td&gt;
+&lt;td&gt;显示网络接口信息&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ping&lt;/td&gt;
+&lt;td&gt;测试网络的连通性&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;netstat&lt;/td&gt;
+&lt;td&gt;显示网络状态信息&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;clear&lt;/td&gt;
+&lt;td&gt;清屏&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;kill&lt;/td&gt;
+&lt;td&gt;杀死一个进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;linux-压缩命令&#34;&gt;Linux 压缩命令&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;语法&lt;/th&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;参数说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;tar&lt;/td&gt;
+&lt;td&gt;tar [-cxzjvf] 压缩打包文档的名称 欲打包目录&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-c&lt;/td&gt;
+&lt;td&gt;建立一个归档文件的参数指令&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-x&lt;/td&gt;
+&lt;td&gt;解开一个归档文件的参数指令&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-z&lt;/td&gt;
+&lt;td&gt;是否需要用 gzip 压缩&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-j&lt;/td&gt;
+&lt;td&gt;是否需要用 bzip2 压缩&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-v&lt;/td&gt;
+&lt;td&gt;压缩的过程中显示文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-f&lt;/td&gt;
+&lt;td&gt;使用档名，在 f 之后要立即接档名&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-tf&lt;/td&gt;
+&lt;td&gt;查看归档文件里面的文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;例子：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;压缩文件夹：&lt;code&gt;tar -zcvf test.tar.gz test\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;解压文件夹：&lt;code&gt;tar -zxvf test.tar.gz&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;gzip&#34;&gt;gzip&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;语法&lt;/th&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;参数说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;gzip&lt;/td&gt;
+&lt;td&gt;gzip [选项] 压缩（解压缩）的文件名&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;解压缩&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-l&lt;/td&gt;
+&lt;td&gt;对每个压缩文件，显示压缩文件的大小，未压缩文件的大小，压缩比，未压缩文件的名字&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-v&lt;/td&gt;
+&lt;td&gt;对每一个压缩和解压的文件，显示文件名和压缩比&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-num&lt;/td&gt;
+&lt;td&gt;用指定的数字num调整压缩的速度，-1或&amp;ndash;fast表示最快压缩方法（低压缩比），-9或&amp;ndash;best表示最慢压缩方法（高压缩比）。系统缺省值为6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;说明：压缩文件后缀为 gz&lt;/p&gt;
+
+&lt;h2 id=&#34;bzip2&#34;&gt;bzip2&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;语法&lt;/th&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;参数说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bzip2&lt;/td&gt;
+&lt;td&gt;bzip2 [-cdz]&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;解压缩&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-z&lt;/td&gt;
+&lt;td&gt;压缩参数&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-num&lt;/td&gt;
+&lt;td&gt;用指定的数字num调整压缩的速度，-1或&amp;ndash;fast表示最快压缩方法（低压缩比），-9或&amp;ndash;best表示最慢压缩方法（高压缩比）。系统缺省值为6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;说明：压缩文件后缀为 bz2&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

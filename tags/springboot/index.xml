@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpringBoot on LWAITING</title>
+    <link>https://ysongsong.github.io/tags/springboot/</link>
+    <description>Recent content in SpringBoot on LWAITING</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 May 2019 11:40:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://ysongsong.github.io/tags/springboot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试 MyBatis 操作数据库</title>
+      <link>https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Mon, 13 May 2019 11:40:38 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>测试 MyBatis 操作数据库 我们以测试操作用户表为例（tb_user）
+修改入口类 需要使用 @MapperScan 注解来指定 Mapper 接口的路径
+PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring.annotation.MapperScan;包下的
+package com.funtl.hello.spring.boot; import org.springframework.boot.SpringApplication; import org.springframework.boot.autoconfigure.SpringBootApplication; import tk.mybatis.spring.annotation.MapperScan; @SpringBootApplication @MapperScan(basePackages = &amp;quot;com.funtl.hello.spring.boot.mapper&amp;quot;) public class HelloSpringBootApplication { public static void main(String[] args) { SpringApplication.run(HelloSpringBootApplication.class, args); } }  创建测试类 package com.funtl.hello.spring.boot; import com.funtl.hello.spring.boot.entity.TbUser; import com.funtl.hello.spring.boot.mapper.TbUserMapper; import com.github.pagehelper.PageHelper; import com.github.pagehelper.PageInfo; import org.junit.Test; import org.junit.runner.RunWith; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.boot.test.context.SpringBootTest; import org.springframework.test.annotation.Rollback; import org.springframework.test.context.junit4.SpringRunner; import org.springframework.transaction.annotation.Transactional; import tk.mybatis.mapper.entity.Example; import java.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot-MyBatis 整合</title>
+      <link>https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/</link>
+      <pubDate>Mon, 13 May 2019 11:37:19 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/</guid>
+      <description>Spring Boot 整合 Druid 概述 Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
+Druid 是目前最好的数据库连接池，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。Druid 已经在阿里巴巴部署了超过 600 个应用，经过多年生产环境大规模部署的严苛考验。Druid 是阿里巴巴开发的号称为监控而生的数据库连接池！
+引入依赖 在 pom.xml 文件中引入 druid-spring-boot-starter 依赖
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;druid-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.1.10&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  引入数据库连接依赖
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  配置 application.yml 在 application.yml 中配置数据库连接
+spring: datasource: druid: url: jdbc:mysql://ip:port/dbname?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;useSSL=false username: root password: 123456 initial-size: 1 min-idle: 1 max-active: 20 test-on-borrow: true # MySQL 8.x: com.mysql.cj.jdbc.Driver driver-class-name: com.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 整合Thymeleaf </title>
+      <link>https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/</link>
+      <pubDate>Mon, 13 May 2019 11:25:40 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/</guid>
+      <description>引入依赖 主要增加 spring-boot-starter-thymeleaf 和 nekohtml 这两个依赖
+ spring-boot-starter-thymeleaf：Thymeleaf 自动配置 nekohtml：允许使用非严格的 HTML 语法  完整的 pom.xml 如下：
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.funtl&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hello-spring-boot&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;hello-spring-boot&amp;lt;/name&amp;gt; &amp;lt;description&amp;gt;&amp;lt;/description&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt; &amp;lt;project.reporting.outputEncoding&amp;gt;UTF-8&amp;lt;/project.reporting.outputEncoding&amp;gt; &amp;lt;java.version&amp;gt;1.8&amp;lt;/java.version&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;net.</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot相关</title>
+      <link>https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 13 May 2019 11:17:12 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/</guid>
+      <description>Spring Boot 常用配置 Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。
+自定义 Banner 在 Spring Boot 启动的时候会有一个默认的启动图案
+ . ____ _ __ _ _ /\\ / ___&#39;_ __ _ _(_)_ __ __ _ \ \ \ \ ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \ \\/ ___)| |_)| | | | | || (_| | ) ) ) ) &#39; |____| .__|_| |_|_| |_\__, | / / / / =========|_|==============|___/=/_/_/_/ :: Spring Boot :: (v1.</description>
+    </item>
+    
+  </channel>
+</rss>

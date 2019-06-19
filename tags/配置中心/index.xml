@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>配置中心 on LWAITING</title>
+    <link>https://ysongsong.github.io/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</link>
+    <description>Recent content in 配置中心 on LWAITING</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 May 2019 15:50:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://ysongsong.github.io/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Cloud 服务配置</title>
+      <link>https://ysongsong.github.io/2019/springcloud%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 30 May 2019 15:50:03 +0000</pubDate>
+      
+      <guid>https://ysongsong.github.io/2019/springcloud%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</guid>
+      <description>Spring Cloud 分布式配置中心 分布式配置中心服务端 创建cinfig管理项目 pom.xml 配置如下
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;top.lwaiting&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hello-spring-cloud-dependencies&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;relativePath&amp;gt;../hello-spring-cloud-dependencies/pom.xml&amp;lt;/relativePath&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;artifactId&amp;gt;hello-spring-cloud-config&amp;lt;/artifactId&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;hello-spring-cloud-config&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.lwaiting.top&amp;lt;/url&amp;gt; &amp;lt;inceptionYear&amp;gt;2019-Now&amp;lt;/inceptionYear&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- Spring Boot Begin --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- Spring Boot End --&amp;gt; &amp;lt;!-- Spring Cloud Begin --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-config-server&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-server&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- Spring Cloud End --&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;mainClass&amp;gt;top.lwaiting.hello.spring.cloud.config.ConfigApplication&amp;lt;/mainClass&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt; &amp;lt;/project&amp;gt;  添加 application.</description>
+    </item>
+    
+  </channel>
+</rss>

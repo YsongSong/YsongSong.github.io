@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="LWAITING">
+  <meta name="description" content="LWAITING BLOG">
+  <meta name="keywords" content="lwaiting">
+  
+  <link rel="prev" href="https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/" />
+  <link rel="next" href="https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/" />
+  <link rel="canonical" href="https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Spring Boot 整合Thymeleaf  | LWAITING
+       
+  </title>
+  <meta name="title" content="Spring Boot 整合Thymeleaf  | LWAITING">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ysongsong.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Spring Boot 整合Thymeleaf ",
+    "headline" : "Spring Boot 整合Thymeleaf ",
+    "description" : "引入依赖 主要增加 spring-boot-starter-thymeleaf 和 nekohtml 这两个依赖\n spring-boot-starter-thymeleaf：Thymeleaf 自动配置 nekohtml：允许使用非严格的 HTML 语法  完整的 pom.xml 如下：\n\x26lt;?xml version=\x26quot;1.0\x26quot; encoding=\x26quot;UTF-8\x26quot;?\x26gt; \x26lt;project xmlns=\x26quot;http:\/\/maven.apache.org\/POM\/4.0.0\x26quot; xmlns:xsi=\x26quot;http:\/\/www.w3.org\/2001\/XMLSchema-instance\x26quot; xsi:schemaLocation=\x26quot;http:\/\/maven.apache.org\/POM\/4.0.0 http:\/\/maven.apache.org\/xsd\/maven-4.0.0.xsd\x26quot;\x26gt; \x26lt;modelVersion\x26gt;4.0.0\x26lt;\/modelVersion\x26gt; \x26lt;groupId\x26gt;com.funtl\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;hello-spring-boot\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;0.0.1-SNAPSHOT\x26lt;\/version\x26gt; \x26lt;packaging\x26gt;jar\x26lt;\/packaging\x26gt; \x26lt;name\x26gt;hello-spring-boot\x26lt;\/name\x26gt; \x26lt;description\x26gt;\x26lt;\/description\x26gt; \x26lt;parent\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-parent\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;2.0.2.RELEASE\x26lt;\/version\x26gt; \x26lt;relativePath\/\x26gt; \x26lt;!-- lookup parent from repository --\x26gt; \x26lt;\/parent\x26gt; \x26lt;properties\x26gt; \x26lt;project.build.sourceEncoding\x26gt;UTF-8\x26lt;\/project.build.sourceEncoding\x26gt; \x26lt;project.reporting.outputEncoding\x26gt;UTF-8\x26lt;\/project.reporting.outputEncoding\x26gt; \x26lt;java.version\x26gt;1.8\x26lt;\/java.version\x26gt; \x26lt;\/properties\x26gt; \x26lt;dependencies\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-web\x26lt;\/artifactId\x26gt; \x26lt;\/dependency\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-tomcat\x26lt;\/artifactId\x26gt; \x26lt;\/dependency\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-thymeleaf\x26lt;\/artifactId\x26gt; \x26lt;\/dependency\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-actuator\x26lt;\/artifactId\x26gt; \x26lt;\/dependency\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-test\x26lt;\/artifactId\x26gt; \x26lt;scope\x26gt;test\x26lt;\/scope\x26gt; \x26lt;\/dependency\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;net.",
+    "inLanguage" : "en-us",
+    "author" : "LWAITING",
+    "creator" : "LWAITING",
+    "publisher": "LWAITING",
+    "accountablePerson" : "LWAITING",
+    "copyrightHolder" : "LWAITING",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-05-13 11:25:40 \x2b0000 UTC",
+    "dateModified" : "2019-05-13 11:25:40 \x2b0000 UTC",
+    "url" : "https:\/\/ysongsong.github.io\/2019\/springboot%E6%95%B4%E5%90%88thymeleaf\/",
+    "wordCount" : "308",
+    "keywords" : [ "SpringBoot", "LWAITING"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Spring Boot 整合Thymeleaf </h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://ysongsong.github.io/" rel="author">LWAITING</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-05-13 itemprop="datePublished">May 13, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.hacpai.com/bing/20171126.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="引入依赖">引入依赖</h2>
+
+<p>主要增加 <code>spring-boot-starter-thymeleaf</code> 和 <code>nekohtml</code> 这两个依赖</p>
+
+<ul>
+<li><code>spring-boot-starter-thymeleaf</code>：Thymeleaf 自动配置</li>
+<li><code>nekohtml</code>：允许使用非严格的 HTML 语法</li>
+</ul>
+
+<p>完整的 <code>pom.xml</code> 如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.funtl&lt;/groupId&gt;
+    &lt;artifactId&gt;hello-spring-boot&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-boot&lt;/name&gt;
+    &lt;description&gt;&lt;/description&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.2.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+
+    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+        &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;
+            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;
+            &lt;version&gt;1.9.22&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;com.funtl.hello.spring.boot.HelloSpringBootApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt; 
+</code></pre>
+
+<h2 id="在-application-yml-中配置-thymeleaf">在 <code>application.yml</code> 中配置 Thymeleaf</h2>
+
+<pre><code class="language-yml">spring:
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: HTML # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html 
+</code></pre>
+
+<h2 id="创建测试用-javabean">创建测试用 JavaBean</h2>
+
+<p>创建一个测试效果的 JavaBean，简单封装一下即可</p>
+
+<pre><code class="language-java">package com.funtl.hello.spring.boot.entity;
+
+import java.io.Serializable;
+
+public class PersonBean implements Serializable {
+
+    private String name;
+    private Integer age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+} 
+</code></pre>
+
+<h2 id="创建测试用-controller">创建测试用 Controller</h2>
+
+<p>创建一个 Controller，造一些测试数据并设置跳转</p>
+
+<pre><code>package com.funtl.hello.spring.boot.controller;
+
+import com.funtl.hello.spring.boot.entity.PersonBean;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller
+@RequestMapping(value = &quot;thymeleaf&quot;)
+public class IndexController {
+
+    @RequestMapping(value = &quot;index&quot;, method = RequestMethod.GET)
+    public String index(Model model) {
+        PersonBean person = new PersonBean();
+        person.setName(&quot;张三&quot;);
+        person.setAge(22);
+
+        List&lt;PersonBean&gt; people = new ArrayList&lt;&gt;();
+        PersonBean p1 = new PersonBean();
+        p1.setName(&quot;李四&quot;);
+        p1.setAge(23);
+        people.add(p1);
+
+        PersonBean p2 = new PersonBean();
+        p2.setName(&quot;王五&quot;);
+        p2.setAge(24);
+        people.add(p2);
+
+        PersonBean p3 = new PersonBean();
+        p3.setName(&quot;赵六&quot;);
+        p3.setAge(25);
+        people.add(p3);
+
+        model.addAttribute(&quot;person&quot;, person);
+        model.addAttribute(&quot;people&quot;, people);
+
+        return &quot;index&quot;;
+    }
+} 
+</code></pre>
+
+<h2 id="创建测试页面">创建测试页面</h2>
+
+<p>在 <code>templates</code> 目录下创建 <code>index.html</code> 文件，代码如下：</p>
+
+<pre><code>&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Hello Thymeleaf&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;span&gt;访问 Model：&lt;/span&gt;&lt;span th:text=&quot;${person.name}&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;span&gt;访问列表&lt;/span&gt;
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;姓名&lt;/th&gt;
+                    &lt;th&gt;年龄&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr th:each=&quot;human : ${people}&quot;&gt;
+                    &lt;td th:text=&quot;${human.name}&quot;&gt;&lt;/td&gt;
+                    &lt;td th:text=&quot;${human.age}&quot;&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<p>修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 <code>th:*</code> 语法，声明如下：</p>
+
+<pre><code>&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt; 
+</code></pre>
+
+<h2 id="测试访问">测试访问</h2>
+
+<p>启动成功后，访问：<a href="http://localhost:9090/thymeleaf/index" rel="nofollow noreferrer" target="_blank">http://localhost:9090/thymeleaf/index</a> 即可看到效果</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://www.funtl.com/assets/Lusifer1527518261.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>LWAITING </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/>https://ysongsong.github.io/2019/springboot%E6%95%B4%E5%90%88thymeleaf/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://ysongsong.github.io/tags/springboot/">
+                    #SpringBoot</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://ysongsong.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/" class="prev" rel="prev" title="SpringBoot相关"><i class="iconfont icon-left"></i>&nbsp;SpringBoot相关</a>
+         
+        
+        <a href="https://ysongsong.github.io/2019/springbootmybatis%E6%95%B4%E5%90%88/" class="next" rel="next" title="Spring Boot-MyBatis 整合">Spring Boot-MyBatis 整合&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://ysongsong.github.io/">LWAITING</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

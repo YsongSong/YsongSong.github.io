@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="LWAITING">
+  <meta name="description" content="LWAITING BLOG">
+  <meta name="keywords" content="lwaiting">
+  
+  <link rel="prev" href="https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+  <link rel="next" href="https://ysongsong.github.io/2019/maven/" />
+  <link rel="canonical" href="https://ysongsong.github.io/2019/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Spring Cloud 微服务架构(Finchley.RC1) | LWAITING
+       
+  </title>
+  <meta name="title" content="Spring Cloud 微服务架构(Finchley.RC1) | LWAITING">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ysongsong.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Spring Cloud 微服务架构(Finchley.RC1)",
+    "headline" : "Spring Cloud 微服务架构(Finchley.RC1)",
+    "description" : "1、Spring Cloud 创建统一的依赖管理 pom.xml配置文件如下：\n\x26lt;?xml version=\x26quot;1.0\x26quot; encoding=\x26quot;UTF-8\x26quot;?\x26gt; \x26lt;project xmlns=\x26quot;http:\/\/maven.apache.org\/POM\/4.0.0\x26quot; xmlns:xsi=\x26quot;http:\/\/www.w3.org\/2001\/XMLSchema-instance\x26quot; xsi:schemaLocation=\x26quot;http:\/\/maven.apache.org\/POM\/4.0.0 http:\/\/maven.apache.org\/xsd\/maven-4.0.0.xsd\x26quot;\x26gt; \x26lt;modelVersion\x26gt;4.0.0\x26lt;\/modelVersion\x26gt; \x26lt;parent\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-starter-parent\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;2.0.4.RELEASE\x26lt;\/version\x26gt; \x26lt;\/parent\x26gt; \x26lt;groupId\x26gt;com.lwaiting\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;hello-spring-cloud-dependencies\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;1.0.0-SNAPSHOT\x26lt;\/version\x26gt; \x26lt;packaging\x26gt;pom\x26lt;\/packaging\x26gt; \x26lt;name\x26gt;hello-spring-cloud-dependencies\x26lt;\/name\x26gt; \x26lt;url\x26gt;http:\/\/www.lwaiting.top\x26lt;\/url\x26gt; \x26lt;inceptionYear\x26gt;2018-Now\x26lt;\/inceptionYear\x26gt; \x26lt;properties\x26gt; \x26lt;!-- Environment Settings --\x26gt; \x26lt;java.version\x26gt;1.8\x26lt;\/java.version\x26gt; \x26lt;project.build.sourceEncoding\x26gt;UTF-8\x26lt;\/project.build.sourceEncoding\x26gt; \x26lt;project.reporting.outputEncoding\x26gt;UTF-8\x26lt;\/project.reporting.outputEncoding\x26gt; \x26lt;!-- Spring Settings --\x26gt; \x26lt;spring-cloud.version\x26gt;Finchley.RELEASE\x26lt;\/spring-cloud.version\x26gt; \x26lt;\/properties\x26gt; \x26lt;dependencyManagement\x26gt; \x26lt;dependencies\x26gt; \x26lt;!-- Spring Cloud Begin --\x26gt; \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;org.springframework.cloud\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-cloud-dependencies\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;${spring-cloud.version}\x26lt;\/version\x26gt; \x26lt;type\x26gt;pom\x26lt;\/type\x26gt; \x26lt;scope\x26gt;import\x26lt;\/scope\x26gt; \x26lt;\/dependency\x26gt; \x26lt;!-- Spring Cloud End --\x26gt; \x26lt;\/dependencies\x26gt; \x26lt;\/dependencyManagement\x26gt; \x26lt;build\x26gt; \x26lt;plugins\x26gt; \x26lt;!-- Compiler 插件, 设定 JDK 版本 --\x26gt; \x26lt;plugin\x26gt; \x26lt;groupId\x26gt;org.",
+    "inLanguage" : "en-us",
+    "author" : "LWAITING",
+    "creator" : "LWAITING",
+    "publisher": "LWAITING",
+    "accountablePerson" : "LWAITING",
+    "copyrightHolder" : "LWAITING",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-05-14 09:17:53 \x2b0000 UTC",
+    "dateModified" : "2019-05-14 09:17:53 \x2b0000 UTC",
+    "url" : "https:\/\/ysongsong.github.io\/2019\/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1\/",
+    "wordCount" : "1736",
+    "keywords" : [ "SpringCloud", "LWAITING"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ysongsong.github.io/">LWAITING</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Spring Cloud 微服务架构(Finchley.RC1)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://ysongsong.github.io/" rel="author">LWAITING</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-05-14 itemprop="datePublished">May 14, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.hacpai.com/bing/20171126.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h1 id="1-spring-cloud-创建统一的依赖管理">1、Spring Cloud 创建统一的依赖管理</h1>
+
+<p>pom.xml配置文件如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.4.RELEASE&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;groupId&gt;com.lwaiting&lt;/groupId&gt;
+    &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-dependencies&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2018-Now&lt;/inceptionYear&gt;
+
+    &lt;properties&gt;
+        &lt;!-- Environment Settings --&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+        &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;
+
+        &lt;!-- Spring Settings --&gt;
+        &lt;spring-cloud.version&gt;Finchley.RELEASE&lt;/spring-cloud.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+
+            &lt;!-- Spring Cloud Begin --&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;
+                &lt;version&gt;${spring-cloud.version}&lt;/version&gt;
+                &lt;type&gt;pom&lt;/type&gt;
+                &lt;scope&gt;import&lt;/scope&gt;
+            &lt;/dependency&gt;
+            &lt;!-- Spring Cloud End --&gt;
+
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;!-- Compiler 插件, 设定 JDK 版本 --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;showWarnings&gt;true&lt;/showWarnings&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- 打包 jar 文件时，配置 manifest 文件，加入 lib 包的 jar 依赖 --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;archive&gt;
+                        &lt;addMavenDescriptor&gt;false&lt;/addMavenDescriptor&gt;
+                    &lt;/archive&gt;
+                &lt;/configuration&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;configuration&gt;
+                            &lt;archive&gt;
+                                &lt;manifest&gt;
+                                    &lt;!-- Add directory entries --&gt;
+                                    &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt;
+                                    &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt;
+                                    &lt;addClasspath&gt;true&lt;/addClasspath&gt;
+                                &lt;/manifest&gt;
+                            &lt;/archive&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- resource --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- install --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-install-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- clean --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- ant --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+
+            &lt;!-- dependency --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+
+        &lt;pluginManagement&gt;
+            &lt;plugins&gt;
+                &lt;!-- Java Document Generate --&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                    &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
+                    &lt;executions&gt;
+                        &lt;execution&gt;
+                            &lt;phase&gt;prepare-package&lt;/phase&gt;
+                            &lt;goals&gt;
+                                &lt;goal&gt;jar&lt;/goal&gt;
+                            &lt;/goals&gt;
+                        &lt;/execution&gt;
+                    &lt;/executions&gt;
+                &lt;/plugin&gt;
+
+                &lt;!-- YUI Compressor (CSS/JS压缩) --&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;net.alchim31.maven&lt;/groupId&gt;
+                    &lt;artifactId&gt;yuicompressor-maven-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;1.5.1&lt;/version&gt;
+                    &lt;executions&gt;
+                        &lt;execution&gt;
+                            &lt;phase&gt;prepare-package&lt;/phase&gt;
+                            &lt;goals&gt;
+                                &lt;goal&gt;compress&lt;/goal&gt;
+                            &lt;/goals&gt;
+                        &lt;/execution&gt;
+                    &lt;/executions&gt;
+                    &lt;configuration&gt;
+                        &lt;encoding&gt;UTF-8&lt;/encoding&gt;
+                        &lt;jswarn&gt;false&lt;/jswarn&gt;
+                        &lt;nosuffix&gt;true&lt;/nosuffix&gt;
+                        &lt;linebreakpos&gt;30000&lt;/linebreakpos&gt;
+                        &lt;force&gt;true&lt;/force&gt;
+                        &lt;includes&gt;
+                            &lt;include&gt;**/*.js&lt;/include&gt;
+                            &lt;include&gt;**/*.css&lt;/include&gt;
+                        &lt;/includes&gt;
+                        &lt;excludes&gt;
+                            &lt;exclude&gt;**/*.min.js&lt;/exclude&gt;
+                            &lt;exclude&gt;**/*.min.css&lt;/exclude&gt;
+                        &lt;/excludes&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+            &lt;/plugins&gt;
+        &lt;/pluginManagement&gt;
+
+        &lt;!-- 资源文件配置 --&gt;
+        &lt;resources&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/java&lt;/directory&gt;
+                &lt;excludes&gt;
+                    &lt;exclude&gt;**/*.java&lt;/exclude&gt;
+                &lt;/excludes&gt;
+            &lt;/resource&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/resources&lt;/directory&gt;
+            &lt;/resource&gt;
+        &lt;/resources&gt;
+    &lt;/build&gt;
+
+    &lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;aliyun-repos&lt;/id&gt;
+            &lt;name&gt;Aliyun Repository&lt;/name&gt;
+            &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+
+        &lt;repository&gt;
+            &lt;id&gt;sonatype-repos&lt;/id&gt;
+            &lt;name&gt;Sonatype Repository&lt;/name&gt;
+            &lt;url&gt;https://oss.sonatype.org/content/groups/public&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+        &lt;repository&gt;
+            &lt;id&gt;sonatype-repos-s&lt;/id&gt;
+            &lt;name&gt;Sonatype Repository&lt;/name&gt;
+            &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+
+        &lt;repository&gt;
+            &lt;id&gt;spring-snapshots&lt;/id&gt;
+            &lt;name&gt;Spring Snapshots&lt;/name&gt;
+            &lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+        &lt;repository&gt;
+            &lt;id&gt;spring-milestones&lt;/id&gt;
+            &lt;name&gt;Spring Milestones&lt;/name&gt;
+            &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;
+
+    &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+            &lt;id&gt;aliyun-repos&lt;/id&gt;
+            &lt;name&gt;Aliyun Repository&lt;/name&gt;
+            &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+    &lt;/pluginRepositories&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<h1 id="2-spring-cloud-服务注册与发现">2、Spring Cloud 服务注册与发现</h1>
+
+<p>此处使用的是Spring Cloud Netflix 的 Eureka，Eureka 是一个服务注册和发现模块</p>
+
+<h2 id="创建服务注册中心">创建服务注册中心</h2>
+
+<p>pom.xml文件如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;top.lwaiting&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;relativePath&gt;../hello-spring-cloud-dependencies/pom.xml&lt;/relativePath&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;hello-spring-cloud-eureka&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-eureka&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2019-Now&lt;/inceptionYear&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- Spring Boot Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Boot End --&gt;
+
+        &lt;!-- Spring Cloud Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Cloud End --&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;com.funtl.itoken.eureka.EurekaApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>aoolication.yml配置如下：</p>
+
+<pre><code class="language-yml">spring:
+  application:
+    name: hello-spring-cloud-eureka
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defautltZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+</code></pre>
+
+<p>EurekaApplication启动类：</p>
+
+<pre><code class="language-java">import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+/**
+ * @ClassName EurekaApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 9:21
+ */
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaApplication.class, args);
+    }
+}
+
+</code></pre>
+
+<h1 id="3-spring-cloud-创建服务提供者">3、Spring Cloud 创建服务提供者</h1>
+
+<p>pom.xml配置如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;top.lwaiting&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;relativePath&gt;../hello-spring-cloud-dependencies/pom.xml&lt;/relativePath&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;hello-spring-cloud-service-admin&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-service-admin&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2019-Now&lt;/inceptionYear&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- Spring Boot Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Boot End --&gt;
+
+        &lt;!-- Spring Cloud Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Cloud End --&gt;
+    &lt;/dependencies&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;top.lwaiting.hello.spring.cloud.service.admin.ServiceAdminApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>application.yml 配置如下：</p>
+
+<pre><code class="language-yml">spring:
+  application:
+    name: hello-spring-cloud-service-admin
+
+server:
+  port: 8762
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+</code></pre>
+
+<p>ServiceAdminApplication启动类</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.service.admin;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+/**
+ * @ClassName ServiceAdminApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 10:41
+ */
+@SpringBootApplication
+@EnableEurekaClient
+public class ServiceAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceAdminApplication.class, args);
+    }
+}
+
+</code></pre>
+
+<p>编写AdminController测试</p>
+
+<pre><code class="language-java">/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:02
+ */
+@RestController
+public class AdminController {
+
+    @Value(&quot;${server.port}&quot;)
+    private String port;
+
+    @GetMapping(&quot;getMessage&quot;)
+    public String getMessage(String message) {
+        return String.format(&quot;you message is : %s port : %s&quot;, message, port);
+    }
+}
+</code></pre>
+
+<h2 id="4-创建服务消费者-ribbon-feign">4、创建服务消费者（Ribbon/Feign）</h2>
+
+<p>在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于 http restful 的。Spring cloud 的两种服务调用方式，一种是ribbon + restTemplate，另一种是feign。</p>
+
+<h3 id="ribbon-rest">ribbon + rest</h3>
+
+<p>Ribbon 是一个负载均衡客户端，可以很好的控制http和tcp的一些行为。</p>
+
+<p>pom.xml配置如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;top.lwaiting&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;relativePath&gt;../hello-spring-cloud-dependencies/pom.xml&lt;/relativePath&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;hello-spring-cloud-web-admin-ribbon&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-web-admin-ribbon&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2019-Now&lt;/inceptionYear&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- Spring Boot Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Boot End --&gt;
+
+        &lt;!-- Spring Cloud Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-ribbon&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Cloud End --&gt;
+
+        &lt;!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;
+            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;top.lwaiting.hello.spring.cloud.web.admin.ribbon.WebAdminRibbonApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>application.yml配置如下：</p>
+
+<pre><code class="language-yml">spring:
+  application:
+    name: hello-spring-cloud-web-admin-ribbon
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8764
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+</code></pre>
+
+<p>添加启动类WebAdminRibbonApplication</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.ribbon;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+/**
+ * @ClassName WebAdminRibbonApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:50
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+
+</code></pre>
+
+<p>添加RestTemple配置</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.ribbon.config;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @ClassName RestTemplateConfiguration
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 14:54
+ */
+@Configuration
+public class RestTemplateConfiguration {
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+</code></pre>
+
+<p>AdminService类编写</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.ribbon.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @ClassName AdminService
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 15:33
+ */
+@Service
+public class AdminService {
+
+    @Autowired
+    public RestTemplate restTemplate;
+
+    public String getMessage(String message) {
+        return restTemplate.getForObject(&quot;http://hello-spring-cloud-service-admin/getMessage?message=&quot; + message, String.class);
+    }
+}
+
+</code></pre>
+
+<p>AdminController编写并测试</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.ribbon.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import top.lwaiting.hello.spring.cloud.web.admin.ribbon.service.AdminService;
+
+/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 15:37
+ */
+@RestController
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @GetMapping(&quot;getMessage&quot;)
+    public String getMessage(String message) {
+        return adminService.getMessage(message);
+    }
+}
+
+</code></pre>
+
+<h3 id="feign">Feign</h3>
+
+<p>pom.xml配置如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;top.lwaiting&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;relativePath&gt;../hello-spring-cloud-dependencies/pom.xml&lt;/relativePath&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;hello-spring-cloud-web-admin-feign&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-web-admin-feign&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2019-Now&lt;/inceptionYear&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- Spring Boot Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Boot End --&gt;
+
+        &lt;!-- Spring Cloud Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Cloud End --&gt;
+
+        &lt;!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;
+            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;top.lwaiting.hello.spring.cloud.web.admin.feign.WebAdminRibbonApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>application.yml配置如下：</p>
+
+<pre><code class="language-yml">spring:
+  application:
+    name: hello-spring-cloud-web-admin-feign
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defautltZone: http://localhost:8761/eureka/
+</code></pre>
+
+<p>添加启动类WebAdminFeignApplication</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.feign;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+/**
+ * @ClassName WebAdminFeignApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:36
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients
+public class WebAdminFeignApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminFeignApplication.class, args);
+    }
+}
+
+</code></pre>
+
+<p>添加 Feign 接口 AdminService</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.feign.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * @ClassName AdminService
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:42
+ */
+@FeignClient(value = &quot;hello-spring-cloud-service-admin&quot;)
+public interface AdminService {
+
+    /**
+     * 获取信息
+     * @param message
+     * @return
+     */
+    @GetMapping(&quot;getMessage&quot;)
+    String getMessage(@RequestParam(value = &quot;message&quot;) String message);
+}
+
+</code></pre>
+
+<p>添加测试用的Controller</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.feign.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import top.lwaiting.hello.spring.cloud.web.admin.feign.service.AdminService;
+
+/**
+ * @ClassName AdminController
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 16:47
+ */
+@RestController
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @GetMapping(&quot;getMessage&quot;)
+    public String getMessage(String message) {
+        return adminService.getMessage(message);
+    }
+}
+
+</code></pre>
+
+<h2 id="5-使用熔断器防止服务雪崩">5、使用熔断器防止服务雪崩</h2>
+
+<h3 id="在-ribbon-中使用熔断器">在 Ribbon 中使用熔断器</h3>
+
+<p>在 pom.xml 中增加依赖</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre>
+
+<p>在Application中增加@EnableHyHystrix注解</p>
+
+<pre><code class="language-java">package top.lwaiting.hello.spring.cloud.web.admin.ribbon;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+
+/**
+ * @ClassName WebAdminRibbonApplication
+ * @Description TODO
+ * @Author Yang Song
+ * @Date 2019/5/14 11:50
+ */
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableHystrix
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+</code></pre>
+
+<p>在service中增加@Hysteri小Command注解</p>
+
+<p>在Ribbon 调用方法上增加@HysterixCommand注解并指定 falfallbackMethod熔断方法</p>
+
+<h3 id="在-feign-中使用熔断器">在 Feign 中使用熔断器</h3>
+
+<p>Feign是自带熔断器的，但默认是关闭的。需要在配置文件中打开它，在配置文件增加以下代码：</p>
+
+<pre><code class="language-yml">feign:
+  hystrix:
+    enable: true
+</code></pre>
+
+<p>在Service中增加fallback指定类</p>
+
+<pre><code class="language-java">@FeignClient(value = &quot;hello-spring-cloud-service-admin&quot;, fallback = AdminServiceHystrix.class)
+
+public interface AdminService {
+
+    /**
+     * 获取信息
+     * @param message
+     * @return
+     */
+    @GetMapping(&quot;getMessage&quot;)
+    String getMessage(@RequestParam(value = &quot;message&quot;) String message);
+}
+</code></pre>
+
+<p>创建熔断器类并实现对应的Feign接口</p>
+
+<pre><code class="language-java">@Component
+public class AdminServiceHystrix implements AdminService {
+    @Override
+    public String getMessage(String message) {
+        return String.format(&quot;Hi your message is : %s, but request error&quot;, message);
+    }
+}
+</code></pre>
+
+<p>进行测试</p>
+
+<h2 id="6-spring-cloud-使用熔断器仪表盘监控">6、Spring Cloud 使用熔断器仪表盘监控</h2>
+
+<p>在 Ribbon 和 Feign 项目中增加 Hytrix 仪表盘功能，两个项目的改造方式相同</p>
+
+<h4 id="在-pom-xml-中增加依赖">在 <code>pom.xml</code>中增加依赖</h4>
+
+<pre><code class="language-xml">&lt;!-- 熔断器仪表盘 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix-dashboard&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre>
+
+<h4 id="在-application-中增加-enablehystrixdashboard-注解">在 Application 中增加 @EnableHystrixDashboard 注解</h4>
+
+<pre><code class="language-java">@SpringBootApplication
+
+@EnableDiscoveryClient
+
+@EnableHystrix
+@EnableHystrixDashboard
+public class WebAdminRibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebAdminRibbonApplication.class, args);
+    }
+}
+</code></pre>
+
+<h4 id="创建-hystrix-stream-的-servlet-配置">创建 hystrix.stream 的 Servlet 配置</h4>
+
+<p>Spring Boot 2.x 版本开启 HystrixDashboard 与 Spring Boot 1.x 的方式略有不同，需要增加一个 HystrixMetricsStreamServlet 的配置，代码如下：</p>
+
+<pre><code class="language-java">@Configuration
+public class HystrixDashboardConfiguration {
+
+    public ServletRegistrationBean getServlet() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings(&quot;hystrix.stream&quot;);
+        registrationBean.setName(&quot;HystrixMetricsStreamServlet&quot;);
+        return registrationBean;
+    }
+}
+</code></pre>
+
+<h2 id="7-spring-cloud-使用路由网关统一访问接口">7、Spring Cloud 使用路由网关统一访问接口</h2>
+
+<h4 id="pom-xml-配置如下"><code>pom.xml</code>  配置如下：</h4>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;top.lwaiting&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;relativePath&gt;../hello-spring-cloud-dependencies/pom.xml&lt;/relativePath&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;hello-spring-cloud-zuul&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;hello-spring-cloud-zuul&lt;/name&gt;
+    &lt;url&gt;http://www.lwaiting.top&lt;/url&gt;
+    &lt;inceptionYear&gt;2019-Now&lt;/inceptionYear&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- Spring Boot Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Boot End --&gt;
+
+        &lt;!-- Spring Cloud Begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-zuul&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Spring Cloud End --&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;mainClass&gt;top.lwaiting.hello.spring.cloud.zuul.ZuulApplication&lt;/mainClass&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<h4 id="application-yml-配置如下"><code>application.yml</code> 配置如下：</h4>
+
+<pre><code class="language-yml">spring:
+  application:
+    name: hello-spring-cloud-zuul
+
+server:
+  port: 8769
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: hello-spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: hello-spring-cloud-web-admin-feign
+
+</code></pre>
+
+<h4 id="创建启动类-zuulapplication-class">创建启动类 <code>ZuulApplication.class</code></h4>
+
+<p><code>@EnableZuulProxy</code> 开启 Zuul 功能</p>
+
+<pre><code class="language-java">@SpringBootApplication
+@EnableEurekaClient
+@EnableZuulProxy
+public class ZuulApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ZuulApplication.class, args);
+    }
+}
+</code></pre>
+
+<h4 id="路由调用失败的处理类">路由调用失败的处理类</h4>
+
+<pre><code class="language-java">@Component
+public class WebAdminFeignFallbackProvider implements FallbackProvider {
+    @Override
+    public String getRoute() {
+        // serviceId, 如果需要所有调用都支持回退，则 return &quot;*&quot; 或 return &quot;null&quot;
+        return &quot;hello-spring-cloud-web-admin-feign&quot;;
+    }
+
+    /**
+     * 如果请求服务失败，则返回指定信息给调用者
+     * @param route
+     * @param cause
+     * @return
+     */
+    @Override
+    public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
+        return new ClientHttpResponse() {
+            /**
+             * 网关向 api 请求失败了，但是消费者客户端向网关发起的请求是成功的，
+             * 不应该吧 api 的 404、500 等问题抛给客户端
+             * 网关和 api 服务集群对于客户端来说是黑盒
+             * @return
+             * @throws IOException
+             */
+            @Override
+            public HttpStatus getStatusCode() throws IOException {
+                return HttpStatus.OK;
+            }
+
+            @Override
+            public int getRawStatusCode() throws IOException {
+                return HttpStatus.OK.value();
+            }
+
+            @Override
+            public String getStatusText() throws IOException {
+                return HttpStatus.OK.getReasonPhrase();
+            }
+
+            @Override
+            public void close() {
+
+            }
+
+            @Override
+            public InputStream getBody() throws IOException {
+                ObjectMapper objectMapper = new ObjectMapper();
+                Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();
+                map.put(&quot;status&quot;, 200);
+                map.put(&quot;message&quot;, &quot;无法连接，请检查网络&quot;);
+                return new ByteArrayInputStream(objectMapper.writeValueAsString(map).getBytes(&quot;UTF-8&quot;));
+            }
+
+            @Override
+            public HttpHeaders getHeaders() {
+                HttpHeaders headers = new HttpHeaders();
+                // 和 getBody 中内容编码一致
+                headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+                return headers;
+            }
+        };
+    }
+}
+
+</code></pre>
+
+<h2 id="8-spring-cloud-使用路由网关的服务过滤功能">8、Spring Cloud 使用路由网关的服务过滤功能</h2>
+
+<h4 id="创建服务过滤器">创建服务过滤器</h4>
+
+<p>继承 <code>ZuulFilter</code> 类并在类上增加 <code>@Component</code> 注解就可以使用服务过滤功能了。</p>
+
+<pre><code class="language-java">@Component
+public class LoginFilter extends ZuulFilter {
+    @Override
+    public String filterType() {
+        return &quot;pre&quot;;
+    }
+
+    @Override
+    public int filterOrder() {
+        return 0;
+    }
+
+    @Override
+    public boolean shouldFilter() {
+        return true;
+    }
+
+    @Override
+    public Object run() throws ZuulException {
+        RequestContext currentContext = RequestContext.getCurrentContext();
+        HttpServletRequest request = currentContext.getRequest();
+        String token = request.getParameter(&quot;token&quot;);
+        if (token == null) {
+            currentContext.setSendZuulResponse(false);
+            currentContext.setResponseStatusCode(401);
+            try {
+                HttpServletResponse response = currentContext.getResponse();
+                response.setContentType(&quot;text/html;charset=utf-8&quot;);
+                response.getWriter().write(&quot;非法请求！&quot;);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+}
+
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>LWAITING </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ysongsong.github.io/2019/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1/>https://ysongsong.github.io/2019/springcloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84finchley.rc1/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://ysongsong.github.io/tags/springcloud/">
+                    #SpringCloud</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://ysongsong.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ysongsong.github.io/2019/%E6%B5%8B%E8%AF%95mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/" class="prev" rel="prev" title="测试 MyBatis 操作数据库"><i class="iconfont icon-left"></i>&nbsp;测试 MyBatis 操作数据库</a>
+         
+        
+        <a href="https://ysongsong.github.io/2019/maven/" class="next" rel="next" title="Maven">Maven&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://ysongsong.github.io/">LWAITING</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
