@@ -150,7 +150,7 @@
 
 <p>创建cinfig管理项目 <code>pom.xml</code> 配置如下</p>
 
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
     &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
@@ -205,7 +205,7 @@
 
 <h4 id="添加-application-yml-配置文件">添加 <code>application.yml</code>配置文件</h4>
 
-<pre><code>spring:
+<pre><code class="language-yml">spring:
 
   application:
     name: hello-spring-cloud-config
@@ -231,7 +231,7 @@ eureka:
 
 <h4 id="添加启动类">添加启动类</h4>
 
-<pre><code>@SpringBootApplication
+<pre><code class="language-java">@SpringBootApplication
 @EnableEurekaClient
 @EnableConfigServer
 public class ConfigApplication {
@@ -255,7 +255,7 @@ public class ConfigApplication {
 
 <p><code>applicatiom.yml</code> 增加配置</p>
 
-<pre><code>cloud:
+<pre><code class="language-yml">cloud:
     config:
       uri: http://localhost:8888
       name: web-admin-feign

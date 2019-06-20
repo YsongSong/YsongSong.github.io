@@ -56,7 +56,7 @@ spring: datasource: druid: url: jdbc:mysql://ip:port/dbname?useUnicode=true&amp;
       <guid>https://ysongsong.github.io/2019/springboot%E7%9B%B8%E5%85%B3/</guid>
       <description>Spring Boot 常用配置 Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。
 自定义 Banner 在 Spring Boot 启动的时候会有一个默认的启动图案
- . ____ _ __ _ _ /\\ / ___&#39;_ __ _ _(_)_ __ __ _ \ \ \ \ ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \ \\/ ___)| |_)| | | | | || (_| | ) ) ) ) &#39; |____| .__|_| |_|_| |_\__, | / / / / =========|_|==============|___/=/_/_/_/ :: Spring Boot :: (v1.</description>
+. ____ _ __ _ _ /\\ / ___&#39;_ __ _ _(_)_ __ __ _ \ \ \ \ ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \ \\/ ___)| |_)| | | | | || (_| | ) ) ) ) &#39; |____| .__|_| |_|_| |_\__, | / / / / =========|_|==============|___/=/_/_/_/ :: Spring Boot :: (v1.</description>
     </item>
     
   </channel>

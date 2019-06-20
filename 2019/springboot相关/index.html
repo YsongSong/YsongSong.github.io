@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "SpringBoot相关",
     "headline" : "SpringBoot相关",
-    "description" : "Spring Boot 常用配置 Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。\n自定义 Banner 在 Spring Boot 启动的时候会有一个默认的启动图案\n . ____ _ __ _ _ \/\\\\ \/ ___\x27_ __ _ _(_)_ __ __ _ \\ \\ \\ \\ ( ( )\\___ | \x27_ | \x27_| | \x27_ \\\/ _` | \\ \\ \\ \\ \\\\\/ ___)| |_)| | | | | || (_| | ) ) ) ) \x27 |____| .__|_| |_|_| |_\\__, | \/ \/ \/ \/ =========|_|==============|___\/=\/_\/_\/_\/ :: Spring Boot :: (v1.",
+    "description" : "Spring Boot 常用配置 Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。\n自定义 Banner 在 Spring Boot 启动的时候会有一个默认的启动图案\n. ____ _ __ _ _ \/\\\\ \/ ___\x27_ __ _ _(_)_ __ __ _ \\ \\ \\ \\ ( ( )\\___ | \x27_ | \x27_| | \x27_ \\\/ _` | \\ \\ \\ \\ \\\\\/ ___)| |_)| | | | | || (_| | ) ) ) ) \x27 |____| .__|_| |_|_| |_\\__, | \/ \/ \/ \/ =========|_|==============|___\/=\/_\/_\/_\/ :: Spring Boot :: (v1.",
     "inLanguage" : "en-us",
     "author" : "LWAITING",
     "creator" : "LWAITING",
@@ -156,7 +156,7 @@
 
 <p>在 Spring Boot 启动的时候会有一个默认的启动图案</p>
 
-<pre><code>  .   ____          _            __ _ _
+<pre><code class="language-INFO">  .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
@@ -171,7 +171,7 @@
 
 <p>再次运行这个程序</p>
 
-<pre><code>${AnsiColor.BRIGHT_RED}
+<pre><code class="language-INFO">${AnsiColor.BRIGHT_RED}
 ////////////////////////////////////////////////////////////////////
 //                          _ooOoo_                               //
 //                         o8888888o                              //
@@ -212,13 +212,13 @@
 
 <p>修改 Tomcat 的端口为 9090，并将默认的访问路径 &ldquo;/&rdquo; 修改为 &ldquo;boot&rdquo;，可以在 <code>application.properties</code> 中添加：</p>
 
-<pre><code>server.port=9090
+<pre><code class="language-prop">server.port=9090
 server.context-path=/boot
 </code></pre>
 
 <p>或在 application.yml 中添加：</p>
 
-<pre><code>server:
+<pre><code class="language-prop">server:
   port: 9090
   context-path: /boot
 </code></pre>
@@ -229,7 +229,7 @@ server.context-path=/boot
 
 <p>默认情况下，Spring Boot 使用 Logback 作为日志框架</p>
 
-<pre><code class="language-yaml">logging:
+<pre><code class="language-yml">logging:
   file: ../logs/spring-boot-hello.log
   level.org.springframework.web: DEBUG
 </code></pre>
