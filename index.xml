@@ -2369,7 +2369,7 @@ public class PersonBean implements Serializable {
 
 &lt;p&gt;创建一个 Controller，造一些测试数据并设置跳转&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;package com.funtl.hello.spring.boot.controller;
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;package com.funtl.hello.spring.boot.controller;
 
 import com.funtl.hello.spring.boot.entity.PersonBean;
 import org.springframework.stereotype.Controller;
@@ -2418,7 +2418,7 @@ public class IndexController {
 
 &lt;p&gt;在 &lt;code&gt;templates&lt;/code&gt; 目录下创建 &lt;code&gt;index.html&lt;/code&gt; 文件，代码如下：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
 &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt;
 &amp;lt;head&amp;gt;
     &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
@@ -2451,7 +2451,7 @@ public class IndexController {
 
 &lt;p&gt;修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 &lt;code&gt;th:*&lt;/code&gt; 语法，声明如下：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html SYSTEM &amp;quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&amp;quot;&amp;gt;
 &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;
 
